@@ -1,0 +1,750 @@
+
+{% extends 'MyProducts/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% load i18n %}
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="main.css">
+
+         <!---jqeury css link---->
+     <link rel="stylesheet" href="{% static 'DimosoApp/assets/jqueryui/jquery-ui.css' %}">
+    <link rel="stylesheet" href="{% static 'DimosoApp/assets/jqueryui/jquery-ui.structure.min.css' %}">
+    <link rel="stylesheet" href="{% static 'DimosoApp/assets/jqueryui/jquery-ui.structure.css' %}">
+    <link rel="stylesheet" href="{% static 'DimosoApp/assets/jqueryui/jquery-ui.theme.min.css' %}">
+     <link rel="stylesheet" href="{% static 'DimosoApp/assets/jqueryui/jquery-ui.theme.css' %}">
+        <!-- font awesome -->
+        <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
+        <style type="text/css">
+            @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700;900&display=swap');
+
+
+:root{
+    --white-light: rgba(255, 255, 255, 0.5);
+    --alice-blue: #f8f9fa;
+    --carribean-green: #40c9a2;
+    --gray: #ededed;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* Utility stylings */
+img{
+    width: 100%;
+    display: block;
+}
+.container{
+    width: 88vw;
+    margin: 0 auto;
+}
+.lg-title,
+.md-title,
+.sm-title{
+    font-family: 'Roboto', sans-serif;
+    padding: 0.6rem 0;
+    text-transform: capitalize;
+}
+.lg-title{
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-align: center;
+    padding: 1.3rem 0;
+    opacity: 0.9;
+}
+.md-title{
+    font-size: 2rem;
+    font-family: 'Roboto', sans-serif;
+}
+.sm-title{
+    font-weight: 300;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+.text-light{
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5;
+    opacity: 0.5;
+    margin: 0.4rem 0;
+
+}
+
+/* product section */
+.products{
+    background: var(--alice-blue);
+    padding: 3.2rem 0;
+}
+.products .text-light{
+    text-align: center;
+    width: 70%;
+    margin: 0.9rem auto;
+}
+.product{
+    margin: 2rem;
+    position: relative;
+}
+.product-content{
+    background: var(--gray);
+    padding: 3rem 0.5rem 2rem 0.5rem;
+    cursor: pointer;
+}
+.product-img{
+    background: var(--white-light);
+    box-shadow: 0 0 20px 10px var(--white-light);
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    border-radius: 50%;
+    transition: background 0.5s ease;
+}
+.product-btns{
+    display: flex;
+    justify-content: center;
+    margin-top: 1.4rem;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+.btn-cart, .btn-buy{
+    background: transparent;
+    border: 1px solid black;
+    padding: 0.8rem 0;
+    width: 125px;
+    font-family: inherit;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+    transition: all 0.6s ease;
+}
+.btn-cart{
+    background: black;
+    color: white;
+}
+.btn-cart:hover{
+    background: var(--carribean-green);
+}
+.btn-buy{
+    background: white;
+}
+.btn-buy:hover{
+    background: var(--carribean-green);
+    color: #fff;
+}
+.product-info{
+    background: white;
+    padding: 2rem;
+}
+.product-info-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.rating span{
+    color: var(--carribean-green);
+}
+.product-name{
+    color: black;
+    display: block;
+    text-decoration: none;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.product-price{
+    padding-top: 0.6rem;
+    padding-right: 0.6rem;
+    display: inline-block;
+}
+.product-price:first-of-type{
+    text-decoration: line-through;
+    color: var(--carribean-green);
+}
+.product-img img{
+    transition: transform 0.6s ease;
+}
+.product:hover .product-img img{
+    transform: scale(1.1);
+}
+.product:hover .product-img{
+    background: var(--carribean-green);
+}
+.product:hover .product-btns{
+    opacity: 1;
+}
+.off-info .sm-title{
+    background: var(--carribean-green);
+    color: white;
+    display: inline-block;
+    padding: 0.5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    z-index: 1;
+    letter-spacing: 3px;
+    cursor: pointer;
+}
+
+/* product collection */
+.product-collection{
+    padding: 3.2rem 0;
+}
+.product-collection-wrapper{
+    padding: 3.2rem 0;
+}
+.product-col-left{
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), url("{% static 'DimosoApp/assets/images/fashion-img-1.jpg' %}") center/cover no-repeat;
+}
+.product-col-r-top{
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), url("{% static 'DimosoApp/assets/images/fashion-img-2.png' %}") center/cover no-repeat;
+}
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 50vh;
+    padding: 2rem 1.5rem 3.2rem;
+    margin: 5px;
+}
+.product-col-r-bottom > div:first-child{
+    background: #eaa001;
+}
+.product-col-r-bottom > div:last-child{
+    background: #0090ff;
+}
+.product-col-content{
+    text-align: center;
+    color: white;
+}
+.product-collection .text-light{
+    opacity: 1;
+    font-size: 0.8;
+    font-weight: 400;
+    line-height: 1.7;
+}
+.btn-dark{
+    background: black;
+    color: white;
+    outline: 0;
+    border-radius: 25px;
+    padding: 0.7rem 1rem;
+    border: 0;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: all 0.6s ease;
+    font-size: 1rem;
+    font-family: inherit;
+}
+.btn-dark:hover{
+    background: var(--carribean-green);
+}
+
+
+
+
+
+
+
+/* Media Queries */
+@media screen and (min-width: 992px){
+    .product-items{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .product-col-r-bottom{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (min-width: 1200px){
+    .product-items{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .product{
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+    .products .text-light{
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 1336px){
+    .product-items{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .product-collection-wrapper{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .flex{
+        height: 60vh;
+    }
+    .product-col-left{
+        height: 121.5vh;
+    }
+}
+
+.wrapper{
+  width: 100%;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px 1px rgba(0,0,0,0.1);
+}
+.wrapper .title{
+  height: 90px;
+  background: #16a085;
+  border-radius: 5px 5px 0 0;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper form{
+  padding: 30px 25px 25px 25px;
+}
+.wrapper form .row{
+  height: 45px;
+  margin-bottom: 15px;
+  position: relative;
+}
+.wrapper form .row input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding-left: 60px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+form .row input:focus{
+  border-color: #16a085;
+  box-shadow: inset 0px 0px 2px 2px rgba(26,188,156,0.25);
+}
+form .row input::placeholder{
+  color: #999;
+}
+.wrapper form .row i{
+  position: absolute;
+  width: 47px;
+  height: 100%;
+  color: #fff;
+  font-size: 18px;
+  background: #16a085;
+  border: 1px solid #16a085;
+  border-radius: 5px 0 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper form .pass{
+  margin: -8px 0 20px 0;
+}
+.wrapper form .pass a{
+  color: #16a085;
+  font-size: 17px;
+  text-decoration: none;
+}
+.wrapper form .pass a:hover{
+  text-decoration: underline;
+}
+.wrapper form .button input{
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  padding-left: 0px;
+  background: #16a085;
+  border: 1px solid #16a085;
+  cursor: pointer;
+}
+form .button input:hover{
+  background: #12876f;
+}
+.wrapper form .signup-link{
+  text-align: center;
+  margin-top: 20px;
+  font-size: 17px;
+}
+.wrapper form .signup-link a{
+  color: #16a085;
+  text-decoration: none;
+}
+form .signup-link a:hover{
+  text-decoration: underline;
+}
+
+
+
+
+        </style>
+    </head>
+    <body style="">
+
+        <div class = "products">
+            <div class = "container">
+
+                <div style="background:url('{% static 'DimosoApp/assets/img/k1.jpg' %}');  height: 8cm;">
+                <h1 class = "lg-title" style="color: blue;font-family: bold;font-weight: bold;">{% translate "Special Products With Offers" %}</h1>
+              
+                </div>
+
+
+
+
+
+
+{% if messages %}
+    {% for message in messages %}
+     
+
+          <div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <strong>{{message}}</strong>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+    {% endfor %}
+  {% endif %}
+
+
+
+
+
+
+
+<div class="row">
+
+ 
+
+     <div class="col-md-4" style="margin-top: 1cm;">
+
+        <!-- Modal -->
+
+
+
+      
+
+<div class="modal fade" id="accepti" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">{% translate "All Categories" %} </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" style="background-color: #128C7E;">
+         <a href="{% url 'home' %}" style="color: white;font-weight: bold;font-family: bold;font-size: 20px;text-decoration: none;"> All</a><br>
+          {% for x in categories %}
+
+    <a href="{{x.get_absolute_url}}" style="color: white;font-weight:;font-family: bold;font-size: 22px;text-decoration: none;"> {{x.name}}</a><br>
+
+    {% endfor %}
+
+
+    
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">{% translate "Close" %}</button>
+
+
+       
+
+             </div>
+    </div>
+  </div>
+</div><!---mwisho wa modal---->
+
+
+
+    </div><!--mwisho wa column yenye width 4--->
+    
+
+
+
+ 
+
+
+</div><!--mwisho wa row --->
+
+
+
+
+ <div class="container">
+      <div class="wrapper">
+        <div class="title"><span><button type="button" class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#accepti">
+  {% translate "ALL PRODUCT CATEGORIES" %}
+</button>
+ </span></div>
+        <form method="get" action="{% url 'search_product' %}">
+
+           {% csrf_token %}
+
+          <div class="row">
+            <i class="fas fa-user"></i>
+           
+            <input type="text" name="search" id="searchi"  placeholder='{% translate "Enter Product Name" %}'><br>
+          </div>
+         
+
+
+
+ 
+          
+          <div class="row button">
+            <input type="submit" value='{% translate "Search" %}'>
+          </div>
+          
+        </form>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<center><h1 style="font-weight: bold;font-family: bold;margin-top: 2cm;">{% translate "OUR PRODUCTS" %}</h1></center>
+
+
+
+
+
+              {% if item %}
+
+
+<div class="row">
+<!-- single product -->
+                    {% for x in item %}
+  <div class="col-md-3">
+    {% if x.image %}
+
+       <img src = "{{x.image.url}}" alt = "product image" style="width: 100%;height: 60%;">
+{% else %}
+       <img src = "{% static 'DimosoApp/assets/img/shoe-2.png' %}" alt = "product image" style="width: 100%;height: 60%;">
+{% endif %}
+
+
+
+  <div class = "row">
+{% if user.is_authenticated %}
+    
+      <div class="col-md-6">
+      <button type = "button" class="btn-primary" style="width: 100%;padding: 10px;border-radius: 10px;">
+                <a href="{% url 'product_details' x.id %}" style="color: white;text-decoration: none;">View</a> 
+                <span><i class = "fas fa-plus"></i></span>
+            </button>
+            </div>
+<div class="col-md-6">
+            <button type = "button" class="btn-success" style="width: 100%;padding: 10px;margin-top: 5px;border-radius: 10px;">
+                <a href="{% url 'contact_me' %}" style="color: white;text-decoration: none;">Contact Me</a> 
+                <span><i class = "fas fa-phone"></i></span>
+            </button>
+            </div>
+      
+   
+    {% else %}
+    
+ <div class="col-md-6">
+      <button type = "button" class="btn-primary" style="width: 100%;padding: 10px;border-radius: 10px;">
+                <a href="{% url 'registration' %}" style="color: white;text-decoration: none;">View</a> 
+                <span><i class = "fas fa-plus"></i></span>
+            </button>
+            </div>
+<div class="col-md-6">
+            <button type = "button" class="btn-success" style="width: 100%;padding: 10px;margin-top: 5px;border-radius: 10px;">
+                <a href="{% url 'contact_me_if_not_registered' %}" style="color: white;text-decoration: none;">Contact Me</a> 
+                <span><i class = "fas fa-phone"></i></span>
+            </button>
+            </div>
+
+
+
+    {% endif %}
+
+   
+        </div>
+
+
+
+         <div class = "product-info">
+                            <div class = "product-info-top">
+                                <h2 class = "sm-title" style="color: red;font-weight: bold;font-family: bold;">{{x.category.name}}</h2>
+                                <div class = "rating">
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "fas fa-star"></i></span>
+                                    <span><i class = "far fa-star"></i></span>
+                                </div>
+                            </div>
+                            <a href = "#" class = "product-name">{{x.item_name}}, 
+                                {% if x.status %}
+                            {{x.status}} {% endif %}</a>
+                            {% if x.discount_price %}
+                            <p class = "product-price">Tsh. {{x.price}}</p>
+                            <p class = "product-price">Tsh. {{x.discount_price}}</p>
+                            {% else %}
+                             <p class = "">Tsh. {{x.price}}</p>
+                             {% endif %}
+
+                        </div>
+
+                        <div class = "off-info">
+                             {% if x.discount_price %}
+                            <h2 class = "sm-title">{{x.discount_price}}</h2>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    {% endfor %}
+                    <!-- end of single product -->
+                    {% else %}
+                    <h1>{% translate "There is no any product uploaded!!!!" %}</h1>
+
+                    {% endif %}
+
+
+
+                </div>
+            </div>
+        </div>
+
+                   
+  </div>
+
+  
+</div>
+
+
+             
+
+                      
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+
+
+
+      <br><br>
+<div style="color: black;background-color: white;font-size: 22px;">
+<center>
+ <h2 style="color: black;font-size: 20px;"> {% translate "page" %} {{item.number}} {% translate "of" %} {{item.paginator.num_pages}}</h2>
+{% if item.has_previous %}
+<a href="?page=1" style="font-weight: bold;text-decoration: none;font-size: 20px;">&laquo {% translate "First" %}</a>
+<a href="?page={{item.previous_page_number}}"style="font-weight: bold;text-decoration: none;font-size: 20px;">{% translate "Previous" %}</a>
+{% endif %}
+
+
+
+{% if item.has_next %}
+<a href="?page={{item.next_page_number}}" style="font-weight: bold;text-decoration: none;font-size: 20px;">{% translate "Next" %}</a>
+<a href="?page={{item.paginator.num_pages}}" style="font-weight: bold;text-decoration: none;font-size: 20px;">{% translate "Last" %} &raquo</a>
+
+{% endif %}
+
+</center>
+</div>
+
+<!--jquery code for autocomplete javascriptcode---->
+<script src="{% static 'DimosoApp/assets/jqueryui/external/jquery/jquery.js' %}" type="text/javascript"></script>
+<script src="{% static 'DimosoApp/assets/jqueryui/jquery-ui.js' %}" type="text/javascript"></script>
+
+
+        <script >
+  $( function() {
+    var availableTags = [
+      "ActionScript",
+      "AppleScript",
+      "Asp",
+      "BASIC",
+      "C",
+      "C++",
+      "Clojure",
+      "COBOL",
+      "ColdFusion",
+      "Erlang",
+      "Fortran",
+      "Groovy",
+      "Haskel",
+      "Java",
+      "JavaScript",
+      "Lisp",
+      "Perl",
+      "PHP",
+      "Python",
+      "Ruby",
+      "Scala",
+      "Scheme"
+      
+
+    ];
+
+   $( "#searchi" ). autocomplete({
+    source: "{% url 'search_autoco_product' %}",
+  });
+
+
+  } );
+  
+  
+
+</script>
+
+    </body>
+</html>
+{% endblock %}

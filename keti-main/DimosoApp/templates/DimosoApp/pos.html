@@ -1,0 +1,29 @@
+{% extends 'MyProducts/base.html' %}
+{% block content %}
+<div class="container mt-4">
+<h3>🧾 Point Of Sale (POS)</h3>
+
+<form method="post" class="card p-4 mt-3">
+{% csrf_token %}
+
+<select name="shop" class="form-select mb-3" required>
+<option value="">-- Chagua Duka --</option>
+{% for s in shops %}
+<option value="{{ s.id }}">{{ s.ShopName }}</option>
+{% endfor %}
+</select>
+
+<select name="product" class="form-select mb-3" required>
+<option value="">-- Chagua Bidhaa --</option>
+{% for p in products %}
+<option value="{{ p.id }}">{{ p.item_name }} ({{ p.quantity }})</option>
+{% endfor %}
+</select>
+
+<input type="number" name="quantity" class="form-control mb-3" placeholder="Kiasi" required>
+
+<button class="btn btn-success w-100">💵 Uza</button>
+</form>
+
+</div>
+{% endblock %}

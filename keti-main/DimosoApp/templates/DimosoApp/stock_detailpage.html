@@ -1,0 +1,187 @@
+{% extends 'MyProducts/base.html' %}
+{% load static %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% translate "Stock Detail" %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body{
+            background:
+                linear-gradient(135deg, rgba(46,125,50,0.15), rgba(255,255,255,0.9)),
+                linear-gradient(45deg, rgba(129,199,132,0.25), rgba(255,255,255,0.8));
+            min-height: 100vh;
+        }
+
+        .page-header{
+            background: linear-gradient(135deg,#1b5e20,#66bb6a);
+            color: #fff;
+            padding: 35px 20px;
+            border-radius: 0 0 35px 35px;
+            box-shadow: 0 15px 40px rgba(0,0,0,.3);
+            margin-bottom: 30px;
+        }
+
+        .action-card{
+            border-radius: 18px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0,0,0,.18);
+            transition: .3s;
+        }
+
+        .action-card:hover{
+            transform: translateY(-6px);
+            box-shadow: 0 30px 60px rgba(0,0,0,.28);
+        }
+
+        .issue{
+            background: linear-gradient(135deg,#1565c0,#42a5f5);
+            color: #fff;
+        }
+
+        .receive{
+            background: linear-gradient(135deg,#2e7d32,#81c784);
+            color: #fff;
+        }
+
+        .table-card{
+            background: #fff;
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 20px 45px rgba(0,0,0,.18);
+        }
+
+        .badge-low{
+            background: #c62828;
+            color: #fff;
+            padding: 6px 12px;
+            border-radius: 12px;
+            font-weight: bold;
+        }
+
+        .badge-ok{
+            background: #2e7d32;
+            color: #fff;
+            padding: 6px 12px;
+            border-radius: 12px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+{% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>{{ message }}</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+    {% endfor %}
+{% endif %}
+
+<!-- HEADER -->
+<div class="page-header text-center">
+    <h2>{{ queryset.item_name }}</h2>
+    <p class="mb-0">{% translate "Stock Details Overview" %}</p>
+</div>
+
+<div class="container">
+
+    <div class="row g-4 mb-4">
+
+        <!-- ACTIONS -->
+        <div class="col-md-3">
+            {% if user.is_superuser %}
+                <a href="{% url 'issue_items' queryset.id %}" class="text-decoration-none">
+                    <div class="action-card issue mb-3">
+                        <h5>{% translate "Issue Item" %}</h5>
+                        <p class="mb-0">{% translate "Sell / Issue from stock" %}</p>
+                    </div>
+                </a>
+
+                <a href="{% url 'receive_items' queryset.id %}" class="text-decoration-none">
+                    <div class="action-card receive">
+                        <h5>{% translate "Receive Item" %}</h5>
+                        <p class="mb-0">{% translate "Add stock quantity" %}</p>
+                    </div>
+                </a>
+            {% else %}
+                <div class="action-card issue mb-3">
+                    <h6>{% translate "Only Admin Can Issue" %}</h6>
+                </div>
+                <div class="action-card receive">
+                    <h6>{% translate "Only Admin Can Receive" %}</h6>
+                </div>
+            {% endif %}
+        </div>
+
+        <!-- DETAILS TABLE -->
+        <div class="col-md-9">
+            <div class="table-card table-responsive">
+
+                {% if queryset %}
+                <table class="table align-middle">
+                    <thead class="table-light">
+                        <tr>
+                            <th>{% translate "Item Name" %}</th>
+                            <th>{% translate "Category" %}</th>
+                            <th>{% translate "Quantity" %}</th>
+                            <th>{% translate "Reorder Level" %}</th>
+                            <th>{% translate "Added On" %}</th>
+                            <th>{% translate "Last Updated" %}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{{ queryset.item_name }}</td>
+                            <td>{{ queryset.category }}</td>
+                            <td>
+                                {% if queryset.quantity <= queryset.reorder_level %}
+                                    <span class="badge-low">{{ queryset.quantity }}</span>
+                                {% else %}
+                                    <span class="badge-ok">{{ queryset.quantity }}</span>
+                                {% endif %}
+                            </td>
+
+                            <td>
+                                {% if user.is_superuser %}
+                                    <a href="{% url 'reorder_level' queryset.id %}"
+                                       class="btn btn-sm btn-outline-primary">
+                                        {{ queryset.reorder_level }}
+                                    </a>
+                                {% else %}
+                                    {{ queryset.reorder_level }}
+                                {% endif %}
+                            </td>
+
+                            <td>{{ queryset.timestamp|date:'d-m-Y H:i' }}</td>
+                            <td>{{ queryset.last_updated|date:'d-m-Y H:i' }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                {% else %}
+                    <h4 class="text-danger text-center">
+                        {% translate "There is no Any Item in a Stock" %}
+                    </h4>
+                {% endif %}
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
+{% endblock %}

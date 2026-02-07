@@ -1,0 +1,300 @@
+{% extends 'MyProducts/base.html' %}
+{% load static %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Products | Inventory</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        /* ===== PAGE BACKGROUND ===== */
+        body{
+            min-height: 100vh;
+            background:
+                linear-gradient(135deg, rgba(46,125,50,0.18), rgba(255,255,255,0.9)),
+                linear-gradient(45deg, rgba(129,199,132,0.25), rgba(255,255,255,0.8));
+            background-attachment: fixed;
+        }
+
+        /* FILTER CARD */
+        .filter-card{
+            background: linear-gradient(160deg,#1b5e20,#66bb6a);
+            border-radius: 18px;
+            padding: 25px;
+            box-shadow: 0 18px 40px rgba(0,0,0,0.3);
+            color: #fff;
+        }
+
+        .filter-card h5{
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .filter-card input,
+        .filter-card select{
+            border-radius: 12px !important;
+        }
+
+        .filter-card .form-check-input{
+            width: 20px;
+            height: 20px;
+            border-radius: 5px;
+        }
+
+        .filter-card button{
+            background: #ffffff;
+            color: #1b5e20;
+            border-radius: 25px;
+            padding: 8px 30px;
+            font-weight: bold;
+            border: none;
+            transition: .3s;
+        }
+
+        .filter-card button:hover{
+            background: #c8e6c9;
+        }
+
+        /* PRODUCT CARD */
+        .product-card{
+            background: #ffffff;
+            border-radius: 22px;
+            overflow: hidden;
+            box-shadow: 0 20px 45px rgba(0,0,0,.18);
+            transition: all .35s ease;
+            height: 100%;
+        }
+
+        .product-card:hover{
+            transform: translateY(-10px);
+            box-shadow: 0 35px 70px rgba(0,0,0,.28);
+        }
+
+        .product-image img{
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .product-body{
+            padding: 20px;
+        }
+
+        .quantity-low{
+            background: #c62828;
+            color: #fff;
+            padding: 6px 12px;
+            border-radius: 10px;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .action-icons a{
+            margin-right: 10px;
+            font-size: 18px;
+            padding: 9px 11px;
+            border-radius: 50%;
+            transition: .3s;
+            display: inline-block;
+        }
+
+        .action-icons a.view{
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+
+        .action-icons a.update{
+            background: #e3f2fd;
+            color: #1565c0;
+        }
+
+        .action-icons a.delete{
+            background: #ffebee;
+            color: #c62828;
+        }
+
+        .action-icons a.history{
+            background: #fff3e0;
+            color: #ef6c00;
+        }
+
+        .action-icons a:hover{
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container-fluid my-4">
+
+    {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>{{message}}</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+        {% endfor %}
+    {% endif %}
+
+    <div class="row">
+
+        <!-- FILTER SECTION -->
+        <div class="col-md-3 mb-4">
+            <div class="filter-card">
+                <h5><i class="fa fa-filter"></i> {% translate "Search & Filter" %}</h5>
+
+                <form method="POST">
+                    {% csrf_token %}
+                    {{ form|crispy }}
+
+                    <div class="text-center mt-3">
+                        <button type="submit">
+                            <i class="fa fa-search"></i> {% translate "Search" %}
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- PRODUCTS -->
+        {% if queryset %}
+        <div class="col-md-9">
+            <div class="row g-4">
+
+                {% for instance in queryset %}
+                <div class="col-md-4">
+                    <div class="product-card">
+
+                        <div class="product-image">
+                            {% if instance.image %}
+                                <img src="{{ instance.image.url }}">
+                            {% else %}
+                                <img src="https://via.placeholder.com/300x200?text=No+Image">
+                            {% endif %}
+                        </div>
+
+                        <div class="product-body">
+                            <h6 class="fw-bold">{{ instance.item_name }}</h6>
+                            <p class="text-muted">{{ instance.category }}</p>
+
+                            {% if instance.discount_price > 0 %}
+                                <p class="text-muted">Price:<strike>{{ instance.price }}/=</strike> {{ instance.discount_price }}/=</p>
+                            {% else %}
+                                <p class="text-muted">Price: {{ instance.price }}/=</p>
+                            {% endif %}
+
+                            {% if instance.quantity <= instance.reorder_level %}
+                                <p class="quantity-low">
+                                    {% translate "Stock" %}: {{ instance.quantity }}
+                                </p>
+                            {% else %}
+                                <p>
+                                    {% translate "Stock" %}: {{ instance.quantity }}
+                                </p>
+                            {% endif %}
+
+                            {% if user.is_superuser %}
+                                <p>
+                                    <a href="{% url 'reorder_level' instance.id %}" class="badge bg-success">
+                                        Reorder: {{ instance.reorder_level }}
+                                    </a>
+                                </p>
+                            {% endif %}
+
+                            <div class="action-icons mt-3">
+                                <a href="{% url 'stock_detailpage' instance.id %}" class="view" title="View">
+                                    <i class="fa fa-eye"></i>
+                                </a>
+
+                                <a href="{% url 'product_history' %}?reg_no={{ instance.reg_no }}" class="history" title="History">
+                                    <i class="fa fa-clock-rotate-left"></i>
+                                </a>
+
+                                {% if user.is_superuser %}
+                                <a href="{% url 'update_items' instance.pk %}" class="update" title="Update">
+                                    <i class="fa fa-pen"></i>
+                                </a>
+
+                                <a href="{% url 'delete_items' instance.id %}" class="delete" title="Delete">
+                                    <i class="fa fa-trash"></i>
+                                </a>
+                                {% endif %}
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+
+            <!-- PAGINATION -->
+            <nav class="mt-5">
+                <ul class="pagination justify-content-center">
+                    {% if queryset.has_previous %}
+                        <li class="page-item">
+                            <a class="page-link" href="?page={{ queryset.previous_page_number }}">
+                                &laquo; {% translate "Previous" %}
+                            </a>
+                        </li>
+                    {% endif %}
+
+                    <li class="page-item active">
+                        <a class="page-link">{{ queryset.number }}</a>
+                    </li>
+
+                    <li class="page-item">
+                        <a class="page-link">{% translate "of" %} {{ queryset.paginator.num_pages }}</a>
+                    </li>
+
+                    {% if queryset.has_next %}
+                        <li class="page-item">
+                            <a class="page-link" href="?page={{ queryset.next_page_number }}">
+                                {% translate "Next" %} &raquo;
+                            </a>
+                        </li>
+                    {% endif %}
+                </ul>
+            </nav>
+
+        </div>
+        {% else %}
+        <h3 class="text-center text-danger">
+            {% translate "There is no Any Item in a Stock" %} => {{ shop.ShopName }}
+        </h3>
+        {% endif %}
+    </div>
+</div>
+
+<!-- AUTOCOMPLETE -->
+<script src="{% static 'DimosoApp/assets/jqueryui/external/jquery/jquery.js' %}"></script>
+<script src="{% static 'DimosoApp/assets/jqueryui/jquery-ui.js' %}"></script>
+<script src="{% static 'DimosoApp/assets/jqueryui/jquery-ui.min.js' %}"></script>
+
+<script>
+$(function () {
+    $("#item").autocomplete({
+        source: "{% url 'search_autoco_product' %}"
+    });
+});
+</script>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+{% endblock %}

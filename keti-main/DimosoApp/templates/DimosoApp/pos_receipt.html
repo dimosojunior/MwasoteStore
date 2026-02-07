@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Receipt</title>
+    <style>
+        body { width: 300px; margin: auto; font-family: monospace; }
+    </style>
+</head>
+<body onload="window.print()">
+
+<h3 style="text-align:center;">MWASOTE PEMBEJEO</h3>
+<hr>
+
+<p>Product: {{ sale.JinaLaBidhaa }}</p>
+<p>Quantity: {{ sale.KiasiChaBidhaaKilichotoka }}</p>
+<p>Amount: {{ sale.HelaUliyopokea }} TZS</p>
+<p>Sold By: {{ sale.ImeuzwaNa }}</p>
+<p>Date: {{ sale.Created|date:"d-m-Y H:i" }}</p>
+
+<hr>
+<p style="text-align:center;">Asante Karibu Tena</p>
+
+</body>
+</html>

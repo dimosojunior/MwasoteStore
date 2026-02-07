@@ -1,0 +1,1230 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{% block title %} base {% endblock %}</title>
+
+        <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="{% static 'DimosoApp/assets/css/all.css' %}">
+
+
+    <!-- --------- Owl-Carousel ------------------->
+    <link rel="stylesheet" href="{% static 'DimosoApp/assets/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'DimosoApp/assets/css/owl.theme.default.min.css' %}">
+
+    <!-- ------------ AOS Library ------------------------- -->
+    <link rel="stylesheet" href="{% static 'DimosoApp/assets/css/aos.css' %}">
+
+
+
+     <!--another jquery for autofilll in add dozi.html css--->
+
+    <!---jqeury css link---->
+     <link rel="stylesheet" href="{% static 'DimosoApp/assets/jqueryui/jquery-ui.css' %}">
+    <link rel="stylesheet" href="{% static 'DimosoApp/assets/jqueryui/jquery-ui.structure.min.css' %}">
+    <link rel="stylesheet" href="{% static 'DimosoApp/assets/jqueryui/jquery-ui.structure.css' %}">
+    <link rel="stylesheet" href="{% static 'DimosoApp/assets/jqueryui/jquery-ui.theme.min.css' %}">
+     <link rel="stylesheet" href="{% static 'DimosoApp/assets/jqueryui/jquery-ui.theme.css' %}">
+
+ <!-- Vendor CSS Files ----->
+    <link href="{% static 'DimosoApp/assets/css/animate.min.css' %}" rel="stylesheet">
+    <link href="{% static 'DimosoApp/assets/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'DimosoApp/assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  
+    <link href="{% static 'DimosoApp/assets/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
+    
+   
+
+   
+    <style type="text/css">
+        
+    main .site-title{
+    background: url("{% static 'DimosoApp/assets/img/er.jpg' %}");
+    background-size: cover;
+    height: 6cm;
+    display: flex;
+    justify-content: center;
+    margin-top: 90px;
+}
+
+
+
+
+html, body{
+    margin: 0%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+
+}
+
+:root{
+
+    /*      Theme colors        */
+    
+    
+    
+
+    /*      theme font-family   */
+    --Serif: 'Serif', cursive;
+   
+}
+
+
+/* ---------------- Global Classes ---------------*/
+
+a{
+    text-decoration: none;
+    
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;    
+    flex-wrap: wrap;
+}
+
+ul{
+    list-style-type: none;
+}
+
+h1{
+    font-family: serif;
+  
+}
+
+h2{
+    font-family: serif;
+}
+
+h3{
+    font-family: serif;
+}
+
+button.btn{
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+   
+    cursor: pointer;
+}
+
+span{
+    font-family: serif;
+
+}
+
+.container{
+    margin: 0 0vw;
+}
+
+
+
+
+/* ------x------- Global Classes -------x-------*/
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* NAVBAR   */
+
+
+
+ul{
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+a{
+    text-decoration: none;
+}
+/*header*/
+.header{
+    position: absolute;
+    width: 100%;
+    left:0;
+    top:0;
+    z-index: 99;
+    padding: 15px;
+    
+}
+.header-main{
+    background-color: #16a085;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-radius: 4px;
+}
+.header .logo{
+    padding: 0 15px;
+}
+.header .logo a{
+    font-size: 30px;
+    text-transform: capitalize;
+    color: #e91e63;
+    font-weight: 600;
+}
+.header .nav-menu{
+    padding: 0 15px;
+}
+.header .menu > .menu-item{
+    display: inline-block;
+    margin-left: 30px;
+    position: relative;
+}
+.header .menu > .menu-item > a{
+    display: block;
+    padding: 12px 0;
+    font-size: 16px;
+    color: white;
+    text-transform: capitalize;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+.header .menu > .menu-item > a .plus{
+    display: inline-block;
+    height: 12px;
+    width: 12px;
+    position: relative;
+    margin-left:5px; 
+    pointer-events: none;
+}
+.header .menu > .menu-item > a .plus:before,
+.header .menu > .menu-item > a .plus:after{
+    content:'';
+    position: absolute;
+    box-sizing: border-box;
+    left: 50%;
+    top:50%;
+    background-color: white;
+    height: 2px;
+    width: 100%;
+    transform: translate(-50%,-50%);
+    transition: all 0.3s ease;
+}
+.header .menu > .menu-item:hover > a .plus:before,
+.header .menu > .menu-item:hover > a .plus:after{
+   background-color: #e91e63;
+}
+.header .menu > .menu-item > a .plus:after{
+   transform: translate(-50%,-50%) rotate(-90deg);  
+}
+.header .menu > .menu-item > .sub-menu > .menu-item > a:hover,
+.header .menu > .menu-item:hover > a{
+    color: #e91e63;
+}
+.header .menu > .menu-item > .sub-menu{
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    width: 220px;
+    position: absolute;
+    left:0;
+    top:100%;
+    background-color: #ffffff;
+    padding: 10px 0;
+    border-top: 3px solid #e91e63;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    opacity:0;
+    visibility: hidden;
+}
+@media(min-width: 992px){
+.header .menu > .menu-item-has-children:hover > .sub-menu{
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+ }
+ .header .menu > .menu-item-has-children:hover > a .plus:after{
+    transform: translate(-50%,-50%) rotate(0deg);       
+ }
+}
+.header .menu > .menu-item > .sub-menu > .menu-item{
+    display: block;
+}
+.header .menu > .menu-item > .sub-menu > .menu-item > a{
+    display: block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000000;
+    transition: all 0.3s ease;
+    text-transform: capitalize;
+}
+.header .open-nav-menu{
+    height: 34px;
+    width: 40px;
+    margin-right: 15px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.header .open-nav-menu span{
+    display: block;
+    height: 3px;
+    width: 24px;
+    background-color: #000000;
+    position: relative;
+}
+.header .open-nav-menu span:before,
+.header .open-nav-menu span:after{
+    content: '';
+    position: absolute;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    box-sizing: border-box;
+}
+.header .open-nav-menu span:before{
+    top:-7px;
+}
+.header .open-nav-menu span:after{
+    top:7px;
+}
+.header .close-nav-menu{
+    height: 40px;
+    width: 40px;
+    background-color: #ffffff;
+    margin:0 0 15px 15px;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.header .close-nav-menu img{
+    width: 16px;
+}
+.header .menu-overlay{
+    position: fixed;
+    z-index: 999;
+    background-color: rgba(0,0,0,0.5);
+    left:0;
+    top:0;
+    height: 100%;
+    width: 100%;
+    visibility: hidden;
+    opacity:0;
+    transition: all 0.3s ease;
+}
+
+/*home section*/
+.home-section{
+    width: 100%;
+    display: block;
+    min-height: 100vh;
+    background-image: url('../img/home.jpg');
+    background-position: center top;
+    background-size: cover;
+}
+
+
+/* responsive */
+
+@media(max-width: 991px){
+    .header .menu-overlay.active{
+    visibility: visible;
+    opacity: 1;
+}
+    .header .nav-menu{
+        position: fixed;
+        right: -280px;
+        visibility: hidden;
+        width: 280px;
+        height: 100%;
+        top:0;
+        overflow-y: auto;
+        background-color: #16a085;
+        z-index: 1000;
+        padding: 15px 0;
+        transition: all 0.5s ease;
+    }
+    .header .nav-menu.open{
+        visibility: visible;
+        right: 0px;
+    }
+    .header .menu > .menu-item{
+        display: block;
+        margin:0;
+    }
+    .header .menu > .menu-item-has-children > a{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .header .menu > .menu-item > a{
+        color: #ffffff;
+        padding: 12px 15px;
+        border-bottom: 1px solid #333333;
+    }
+    .header .menu > .menu-item:first-child > a{
+        border-top: 1px solid #333333;  
+    }
+    .header .menu > .menu-item > a .plus:before, 
+    .header .menu > .menu-item > a .plus:after{
+        background-color: #ffffff;
+    }
+    .header .menu > .menu-item-has-children.active > a .plus:after{
+        transform: translate(-50%,-50%) rotate(0deg);
+    }
+    .header .menu > .menu-item > .sub-menu{
+        width: 100%;
+        position: relative;
+        opacity: 1;
+        visibility: visible;
+        border:none;
+        background-color: transparent;
+        box-shadow: none;
+        transform: translateY(0px);
+        padding: 0px;
+        left: auto;
+        top:auto;
+        max-height: 0;
+        overflow: hidden;
+    }
+    .header .menu > .menu-item > .sub-menu > .menu-item > a{
+        padding: 12px 45px;
+        color: #ffffff;
+        border-bottom: 1px solid #333333;
+    }
+    .header .close-nav-menu,
+    .header .open-nav-menu{
+        display: flex;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------x------- navbar ---------x------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------- Main Content----------- */
+
+/* --------------- Site title ---------------- */
+
+
+main .site-title .site-background{
+    padding-top: 10rem;
+    text-align: center;
+    color: var(--white);
+}
+
+main .site-title h1, h3{
+    margin: .3rem;
+}
+
+main .site-title .btn{
+    margin: 1.8rem;
+    background: var(--sky);
+}
+
+main .site-title .btn:hover{
+    background: transparent;
+    border: 1px solid var(--white);
+    color: var(--white);
+}
+
+/* --------x------ Site title --------x------- */
+
+/* --------------- Blog Carousel ------------ */
+
+main .blog{
+      background-repeat: no-repeat;
+    background-position: right;
+    height: 65vh;
+    width: 100%;
+    background-size: 65%;
+}
+
+main .blog .blog-post{
+    padding-top: 6rem;
+}
+
+main .blog-post .blog-content{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 80%;
+    
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+}
+
+main .blog-content .blog-title{
+    padding: 2rem 0;
+}
+
+main .blog-content .btn-blog{
+    padding: .7rem 2rem;
+    background: var(--sky);
+    margin: .5rem;
+}
+
+main .blog-content span{
+    display: block;
+}
+
+section .container .owl-nav{
+    position: absolute;
+    top: 0%;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.owl-nav .owl-prev .owl-nav-prev,
+.owl-nav .owl-next .owl-nav-next{
+    color: var(--text-gray);
+    background: transparent;
+    font-size: 2rem;
+}
+
+.owl-theme .owl-nav [class*='owl-']:hover{
+    background: transparent;
+    color: var(--midnight);
+}
+
+.owl-theme .owl-nav [class*='owl-']{
+    outline: none;
+}
+
+
+/* -------x------- Blog Carousel -----x------ */
+
+/* ---------------- Site Content ----------------*/
+
+main .site-content{
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+main .post-content{
+    width: 100%;
+    
+}
+
+main .site-content .post-content > .post-image, .post-title{
+    padding-top: : 0rem;
+    position: relative;
+}
+
+main .site-content .post-content > .post-image .post-info{
+    
+    padding: 1px;
+    position: absolute;
+    left: 5cm;
+    bottom: 0%;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid yellow;
+
+    border-radius: 3rem;
+}
+
+main .site-content .post-content > .post-image > div{
+    overflow: hidden;
+}
+
+main .site-content .post-content > .post-image .img{
+    width: 100%;
+    transition: all 1s ease;
+}
+
+main .site-content .post-content > .post-image .img:hover{
+    transform: scale(1.3);
+}
+
+main .site-content .post-content > .post-image .post-info span{
+    margin: 0 .5rem;
+}
+
+main .post-content .post-title a{
+    
+    font-size: 1.5rem;
+}
+
+.site-content .post-content .post-title .post-btn{
+    border-radius: 0;
+    padding: .7rem 1.5rem;
+    background: var(--sky);
+}
+
+.site-content .pagination{
+    justify-content: center;
+    color: var(--text-gray);
+    margin: 4rem 0;
+}
+
+.site-content .pagination a{
+    padding: .6rem .9rem;
+    border-radius: 2rem;
+    margin: 0 .3rem;
+    font-family: var(--Lexend);
+}
+
+.site-content .pagination .pages{
+    background: var(--text-gray);
+    color: var(--white);
+}
+
+/* -------x-------- Site Content --------x-------*/
+
+
+/* --------------- Sidebar ----------------------- */
+
+.site-content > .sidebar .category-list{
+    font-family: var(--Livvic);   
+}
+
+.site-content > .sidebar .category-list .list-items{
+    background: var(--sky);
+    padding: .4rem 1rem;
+    margin: .8rem 0;
+    border-radius: 3rem;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.site-content > .sidebar .category-list .list-items a{
+    
+}
+
+.site-content .sidebar .popular-post .post-content{
+    padding: 1rem 0;
+}
+
+.site-content .sidebar .popular-post h2{
+    padding-top: 8rem;
+}
+
+.site-content .sidebar .popular-post .post-info{
+    padding: .4rem .1rem !important;
+    bottom: 0rem !important;
+    left: 1.5rem !important;
+    border-radius: 0rem !important;
+    background: white !important;
+}
+
+.site-content .sidebar .popular-post .post-title a{
+    font-size: 1rem;
+}
+
+.site-content .sidebar .newsletter{
+    padding-top: 10rem;
+}
+
+.site-content .sidebar .newsletter .form-element{
+    padding: .5rem 2rem;
+}
+
+.site-content .sidebar .newsletter .input-element{
+    width: 80%;
+    height: 1.9rem;
+    padding: .3rem .5rem;
+    font-family: var(--Lexend);
+    font-size: 1rem;
+}
+
+.site-content .sidebar .newsletter .form-btn{
+    border-radius: 0;
+    padding: .8rem 32%;
+    margin: 1rem 0;
+    background: var(--sky);
+}
+
+.site-content .sidebar .popular-tags{
+    padding: 5rem 0;
+}
+
+.site-content .sidebar .popular-tags .tags .tag{
+    background: var(--sky);
+    padding: .4rem 1rem;
+    border-radius: 3rem;
+    margin: .4rem .6rem;
+}
+
+
+/* -------x------- Sidebar -----------x----------- */
+
+/* ---------x------- Main Content -----x----- */
+
+
+/* ----------------- Footer --------------------- */
+
+footer.footer{
+    height: 100%;
+    background: var(--bg-color);
+    position: relative;
+}
+
+footer.footer .container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+footer.footer .container > div{
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 3rem .9rem;
+}
+
+footer.footer .container h2{
+    color: var(--white);
+}
+
+footer.footer .newsletter .form-element{
+    background: black;
+    display: inline-block;
+}
+
+footer.footer .newsletter .form-element input{
+    padding: .5rem .7rem;
+    border: none;
+    background: transparent;
+    color: white;
+    font-family: var(--Josefin);
+    font-size: 1rem;
+    width: 74%;
+}
+
+footer.footer .newsletter .form-element span{
+    background: var(--sky);
+    padding: .5rem .7rem;
+    cursor: pointer;
+}
+
+footer.footer .instagram div > img{
+    display: inline-block;
+    width: 25%;
+    height: 50%;
+    margin: .3rem .4rem;
+}
+
+footer.footer .follow div i{
+    color: var(--white);
+    padding: 0 .4rem;
+}
+
+footer.footer .rights{
+    justify-content: center;
+    font-family: var(--Josefin);
+}
+
+footer.footer .rights h4 a{
+    color: var(--white);
+}
+
+footer.footer .move-up{
+    position: absolute;
+    right: 6%;
+    top: 50%;
+}
+
+footer.footer .move-up span{
+    color: var(--midnight);
+}
+
+footer.footer .move-up span:hover{
+    color: var(--white);
+    cursor: pointer;
+}
+
+/* ---------x------- Footer ----------x---------- */
+
+/*              Viewport less then or equal to 1130px            */
+
+@media only screen and (max-width: 1130px){
+    .site-content .post-content > .post-image .post-info{
+        left: 2rem !important;
+        bottom: 1.2rem !important;
+        border-radius: 0% !important;
+    }
+
+    .site-content .sidebar .popular-post .post-info{
+        display: none !important;
+    }
+
+    footer.footer .container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/*      x       Viewport less then or equal to 1130px    x     */
+
+
+/*              Viewport less then or equal to 750px            */
+
+@media only screen and (max-width: 750px){
+    .nav .nav-menu, .nav .nav-items{
+        flex-direction: column;
+    }
+
+    .nav .toggle-collapse{
+        display: initial;
+    }
+
+    main .site-content{
+        grid-template-columns: 100%;
+    }
+
+    footer.footer .container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+}
+
+
+/*        x      Viewport less then or equal to 750px       x     */
+
+
+/*              Viewport less then or equal to 520px            */
+
+@media only screen and (max-width: 100%){
+    main .blog{
+        
+    }
+
+    .site-content .post-content > .post-image .post-info{
+        display: none;
+    }
+
+    footer.footer .container > div{
+        padding:  1rem .9rem !important;
+    }
+
+    footer .rights{
+        padding: 0 1.4rem;
+        text-align: center;
+    }
+
+    nav .toggle-collapse{
+        width: 80% !important;
+    }
+
+}
+
+/*        x      Viewport less then or equal to 520px       x     */
+
+
+#name{
+    width: 15cm;
+    padding: 15px;
+    margin-left: 15px;
+    border-radius: 10px;
+    border: 3px solid blue;
+}
+.btni{
+    width: 6cm;
+    padding: 10px;
+    margin-left: 18px;
+    border-radius: 15px;
+    background-color: blue;
+    color: white;
+
+}
+.btni:hover{
+    background-color: red;
+
+}
+
+
+    </style>
+
+</head>
+<body style="background-color: #128C7E">
+
+
+
+
+     
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- header start -->
+  <header class="header" style="">
+     <div class="container">
+        <div class="header-main">
+           <div class="logo">
+              <a href="#"><img src="{% static 'DimosoApp/assets/img/icon2.png' %}" class="rounded-circle" style="width: 50px;height: 50px;"></a>
+           </div>
+           <div class="open-nav-menu">
+              <span></span>
+           </div>
+           <div class="menu-overlay">
+           </div>
+           <!-- navigation menu start -->
+           <nav class="nav-menu">
+             <div class="close-nav-menu">
+                <img src="{% static 'DimosoApp/assets/img/close.svg' %}" alt="close">
+             </div>
+             <ul class="menu">
+                 {% if user.is_authenticated %}
+            <li class="menu-item"><a href="" style="color: red;font-weight: bold;">Welcome {{user.username}}</a></li>
+           
+
+                 {% if user.is_superuser %}
+
+            <li  class="menu-item"><a href="/admin">Admin</a></li>
+            
+             
+            {% endif %}
+
+                <li class="menu-item">
+                   <a href="{% url 'home' %}">Home</a> 
+
+                </li>
+                <li class="menu-item menu-item-has-children">
+                   <a href="#" data-toggle="sub-menu">Stock <i class="plus"></i></a>
+                   <ul class="sub-menu">
+                       <li class="menu-item"><a href="{% url 'stock' %}">Items In a Stock</a></li>
+                       <li class="menu-item"><a href="{% url 'add_items' %}">Add Items</a></li>
+                       
+                   </ul>
+                </li>
+                
+                
+              
+              
+
+
+
+             
+                <li class="menu-item"><a href="{% url 'dashboard' %}">Dashboard</a></li>
+
+                <li class="menu-item"><a href="">Logout</a></li>
+                {% else %}
+
+            <li class="menu-item"><a href="">Login</a></li>
+           
+            <li class="menu-item"><a href="">Register</a></li>
+
+
+{% endif %}
+             </ul>
+           </nav>
+           <!-- navigation menu end -->
+        </div>
+     </div>
+  </header>
+  <!-- header end -->
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ------------x---------------  Navigation --------------------------x------------------- -->
+
+    <!----------------------------- Main Site Section ------------------------------>
+
+    <main >
+
+        <!------------------------ Site Title ---------------------->
+
+        <section class="site-title" style="">
+
+
+            <div class="site-background" data-aos="fade-up" data-aos-delay="100" >
+            <!--
+                <h1 style="font-size: 50px;font-weight: bold;font-family: serif;color: blue;">DIMOSO <span style="color: green;font-weight: bold;font-family: serif;">EL </span>BLOG </h1>
+                <button class="btn" style="color: red;font-weight: bold;font-size: 30px;font-family: bold;">FOR UNIVERSITY STUDENTS</button>--->
+            </div>
+        </section>
+
+        <!------------x----------- Site Title ----------x----------->
+
+   
+
+
+{% block content %}
+
+
+{% endblock %}
+
+
+
+    <!-- --------------------------- Footer ---------------------------------------- -->
+<center>
+    <footer class="footer" style="background-color: #075E54;color: white;margin-top: 2cm;">
+        <div class="container-fluid">
+           
+            <div class="about-us" data-aos="fade-right" data-aos-delay="200">
+                <h2>About us</h2>
+                <p style="font-size: 20px;">We are team of talented designers && developers making websites with Python and Php.</p>
+            </div>
+            
+           
+            <div class="follow" data-aos="fade-left" data-aos-delay="200">
+                <h2>Follow Dimoso El Junior in social networks</h2>
+                <p></p>
+               
+
+                <div>
+
+
+                  <a href="https://www.facebook.com/dimosoel.junior/" style="color: white;font-size: 30px;margin-right: 1cm;font-weight: bold;"><i class="fab fa-facebook-f"></i></a>  
+                    
+                <a href="https://www.instagram.com/dimoso_el_junior_jr/" style="color: white;font-size: 30px;margin-right: 1cm;font-weight: bold;"><i class="fab fa-instagram"></i></a>
+                <a href="https://api.whatsapp.com/send?phone=+255628431507text=welcome%20to%20my%20whatsapp/" style="color: white;font-size: 30px;margin-right: 1cm;font-weight: bold;"><i class="fab fa-whatsapp"></i></a>
+                </div>
+
+                           </div>
+
+             <div class="about-us" data-aos="fade-right" data-aos-delay="200">
+                <h2>My Team</h2>
+                <p>
+                    <ul>
+                        <li style="font-size: 20px;font-weight: bold;font-family: bold;">Dimoso El junior</li>
+                        <li style="font-size: 20px;font-weight: bold;font-family: bold;">El Junior</li>
+                        <li style="font-size: 20px;font-weight: bold;font-family: bold;">Shukuru Nicolaus</li>
+                    </ul>
+                </p>
+            </div>
+            
+
+
+        </div>
+        <div class="rights flex-row">
+            <h4 class="text-gray">
+                Copyright ©2021 All rights reserved | made by
+                <a href="#" target="_black">Dimoso El Junior 
+                    </a>
+            </h4>
+        </div>
+        <div class="move-up">
+            <span><i class="fas fa-arrow-circle-up fa-2x"></i></span>
+        
+
+        </div>
+
+
+ 
+
+        
+    </footer>
+    </center>
+
+    <!-- -------------x------------- Footer --------------------x------------------- -->
+
+
+
+
+
+<!--this is for responsive navbar--->
+ <script type="text/javascript">
+     
+
+
+(() =>{
+ 
+  const openNavMenu = document.querySelector(".open-nav-menu"),
+  closeNavMenu = document.querySelector(".close-nav-menu"),
+  navMenu = document.querySelector(".nav-menu"),
+  menuOverlay = document.querySelector(".menu-overlay"),
+  mediaSize = 991;
+
+  openNavMenu.addEventListener("click", toggleNav);
+  closeNavMenu.addEventListener("click", toggleNav);
+  // close the navMenu by clicking outside
+  menuOverlay.addEventListener("click", toggleNav);
+
+  function toggleNav() {
+    navMenu.classList.toggle("open");
+    menuOverlay.classList.toggle("active");
+    document.body.classList.toggle("hidden-scrolling");
+  }
+
+  navMenu.addEventListener("click", (event) =>{
+      if(event.target.hasAttribute("data-toggle") && 
+        window.innerWidth <= mediaSize){
+        // prevent default anchor click behavior
+        event.preventDefault();
+        const menuItemHasChildren = event.target.parentElement;
+        // if menuItemHasChildren is already expanded, collapse it
+        if(menuItemHasChildren.classList.contains("active")){
+            collapseSubMenu();
+        }
+        else{
+          // collapse existing expanded menuItemHasChildren
+          if(navMenu.querySelector(".menu-item-has-children.active")){
+            collapseSubMenu();
+          }
+          // expand new menuItemHasChildren
+          menuItemHasChildren.classList.add("active");
+          const subMenu = menuItemHasChildren.querySelector(".sub-menu");
+          subMenu.style.maxHeight = subMenu.scrollHeight + "px";
+        }
+      }
+  });
+  function collapseSubMenu(){
+    navMenu.querySelector(".menu-item-has-children.active .sub-menu")
+    .removeAttribute("style");
+    navMenu.querySelector(".menu-item-has-children.active")
+    .classList.remove("active");
+  }
+  function resizeFix(){
+     // if navMenu is open ,close it
+     if(navMenu.classList.contains("open")){
+        toggleNav();
+     }
+     // if menuItemHasChildren is expanded , collapse it
+     if(navMenu.querySelector(".menu-item-has-children.active")){
+            collapseSubMenu();
+     }
+  }
+
+  window.addEventListener("resize", function(){
+     if(this.innerWidth > mediaSize){
+        resizeFix();
+     }
+  });
+
+})();
+
+
+ </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--this is for responsive navbar--->
+ <script type="text/javascript">
+        const toggleButton = document.getElementsByClassName('toggle-button')[0]
+const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+
+toggleButton.addEventListener('click', () => {
+  navbarLinks.classList.toggle('active')
+})
+      </script>
+
+
+
+<!--jquery code for autocomplete javascriptcode---->
+<script src="{% static 'DimosoApp/assets/jqueryui/external/jquery/jquery.js' %}" type="text/javascript"></script>
+<script src="{% static 'DimosoApp/assets/jqueryui/jquery-ui.js' %}" type="text/javascript"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- --------- Owl-Carousel js ------------------->
+    <script src="{% static 'DimosoApp/assets/js/owl.carousel.min.js' %}"></script>
+
+    <!-- ------------ AOS js Library  ------------------------- -->
+    <script src="{% static 'DimosoApp/assets/js/aos.js' %}"></script>
+
+    <!-- Custom Javascript file -->
+    <script src="{% static 'DimosoApp/assets/js/main.js' %}"></script>
+
+    <!-- Vendor JS Files -->
+  <script src="{% static 'DimosoApp/assets/js/bootstrap.bundle.min.js' %}"></script>
+ 
+
+
+
+</body>
+</html>

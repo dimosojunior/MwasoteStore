@@ -1,0 +1,30 @@
+{% extends 'MyProducts/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body style="background-color: #128C7E;color: white;margin-top: 2cm;">
+
+
+
+{% if messages %}
+    {% for message in messages %}
+     
+
+          <div class="alert alert-warning alert-dismissible fade show" role="alert" style="background-color: #128C7E;color: white;">
+  <strong style="color: white">{{message}}</strong>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+    {% endfor %}
+  {% endif %}
+
+
+
+
+</body>
+</html>
+{% endblock %}

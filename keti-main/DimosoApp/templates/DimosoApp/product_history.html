@@ -1,0 +1,111 @@
+{% extends 'MyProducts/base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container py-4">
+
+    <h3 class="mb-4">Product History</h3>
+
+    <!-- FILTER SELECT -->
+    <form method="get" class="mb-4 d-flex align-items-center gap-2">
+        <select name="reg_no" class="form-select w-auto">
+            <option value="">-- Select Product --</option>
+            {% for p in products %}
+                <option value="{{ p.reg_no }}" {% if p.reg_no == reg_no %}selected{% endif %}>
+                    {{ p.item_name }} ({{ p.reg_no }})
+                </option>
+            {% endfor %}
+        </select>
+        <button type="submit" class="btn btn-success">Filter</button>
+    </form>
+
+    {% if selected_product %}
+        <h5>Product: {{ selected_product.item_name }} | Reg No: {{ selected_product.reg_no }}</h5>
+
+        <!-- TABS -->
+        <ul class="nav nav-tabs mt-3" id="productTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link {% if not request.GET.tab or request.GET.tab == 'mauzo' %}active{% endif %}" 
+                        id="mauzo-tab" data-bs-toggle="tab" data-bs-target="#mauzo" type="button" role="tab" aria-controls="mauzo" aria-selected="true">
+                    Mauzo
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link {% if request.GET.tab == 'manunuzi' %}active{% endif %}" 
+                        id="manunuzi-tab" data-bs-toggle="tab" data-bs-target="#manunuzi" type="button" role="tab" aria-controls="manunuzi" aria-selected="false">
+                    Manunuzi
+                </button>
+            </li>
+        </ul>
+
+        <div class="tab-content mt-3" id="productTabContent">
+
+            <!-- MAUZO TAB -->
+            <div class="tab-pane fade {% if not request.GET.tab or request.GET.tab == 'mauzo' %}show active{% endif %}" id="mauzo" role="tabpanel" aria-labelledby="mauzo-tab">
+                <table class="table table-bordered table-striped shadow">
+                    <thead class="table-success">
+                        <tr>
+                            <th>#</th>
+                            <th>Kiasi</th>
+                            <th>Hela</th>
+                            <th>Iliuzwa Na</th>
+                            <th>Tarehe</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for m in mauzo %}
+                        <tr>
+                            <td>{{ forloop.counter }}</td>
+                            <td>{{ m.KiasiChaBidhaaKilichotoka }}</td>
+                            <td>{{ m.HelaUliyopokea }}</td>
+                            <td>{{ m.ImeuzwaNa }}</td>
+                            <td>{{ m.Created|date:"d-m-Y H:i" }}</td>
+                        </tr>
+                        {% empty %}
+                        <tr>
+                            <td colspan="5" class="text-center text-danger">Hakuna mauzo</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- MANUNUZI TAB -->
+            <div class="tab-pane fade {% if request.GET.tab == 'manunuzi' %}show active{% endif %}" id="manunuzi" role="tabpanel" aria-labelledby="manunuzi-tab">
+                <table class="table table-bordered table-striped shadow">
+                    <thead class="table-success">
+                        <tr>
+                            <th>#</th>
+                            <th>Kiasi</th>
+                            <th>Hela</th>
+                            <th>Ilinunuliwa Na</th>
+                            <th>Tarehe</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for m in manunuzi %}
+                        <tr>
+                            <td>{{ forloop.counter }}</td>
+                            <td>{{ m.KiasiChaBidhaaUlichonunua }}</td>
+                            <td>{{ m.HelaUliyotoa }}</td>
+                            <td>{{ m.ImenunuliwaNa }}</td>
+                            <td>{{ m.Created|date:"d-m-Y H:i" }}</td>
+                        </tr>
+                        {% empty %}
+                        <tr>
+                            <td colspan="5" class="text-center text-danger">Hakuna manunuzi</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    {% endif %}
+
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+{% endblock %}

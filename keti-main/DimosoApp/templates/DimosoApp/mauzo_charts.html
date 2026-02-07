@@ -1,0 +1,139 @@
+{% extends 'MyProducts/base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sales Charts | {{ shop_name }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        body{
+            background:
+                linear-gradient(135deg, rgba(46,125,50,0.15), rgba(255,255,255,0.9)),
+                linear-gradient(45deg, rgba(129,199,132,0.25), rgba(255,255,255,0.8));
+            min-height: 100vh;
+        }
+
+        .page-header{
+            background: linear-gradient(135deg,#1b5e20,#66bb6a);
+            color: #fff;
+            padding: 40px 20px;
+            border-radius: 0 0 35px 35px;
+            box-shadow: 0 15px 40px rgba(0,0,0,.3);
+            margin-bottom: 40px;
+        }
+
+        .chart-card{
+            background: #fff;
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 20px 45px rgba(0,0,0,.18);
+            transition: .3s;
+        }
+
+        .chart-card:hover{
+            transform: translateY(-6px);
+            box-shadow: 0 30px 60px rgba(0,0,0,.25);
+        }
+
+        .chart-title{
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #2e7d32;
+        }
+    </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="page-header text-center">
+    <h2>Sales Analytics</h2>
+    <p class="mb-0">{{ shop_name }}</p>
+</div>
+
+<div class="container">
+
+    <div class="row g-4 mb-5">
+
+        <!-- DAILY CHART -->
+        <div class="col-lg-6 col-md-12">
+            <div class="chart-card">
+                <h5 class="chart-title">Daily Sales</h5>
+                <canvas id="dailyChart" height="200"></canvas>
+            </div>
+        </div>
+
+        <!-- MONTHLY CHART -->
+        <div class="col-lg-6 col-md-12">
+            <div class="chart-card">
+                <h5 class="chart-title">Monthly Sales</h5>
+                <canvas id="monthlyChart" height="200"></canvas>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+const dailyLabels = [{% for d in daily %}"{{ d.day|date:'d M' }}",{% endfor %}];
+const dailyData = [{% for d in daily %}{{ d.total }},{% endfor %}];
+
+new Chart(document.getElementById('dailyChart'), {
+    type: 'line',
+    data: {
+        labels: dailyLabels,
+        datasets: [{
+            label: 'Daily Sales (TZS)',
+            data: dailyData,
+            borderColor: '#2e7d32',
+            backgroundColor: 'rgba(46,125,50,0.2)',
+            tension: 0.4,
+            fill: true,
+            pointRadius: 4,
+        }]
+    },
+    options: {
+        responsive: true,
+        plugins: {
+            legend: { display: true }
+        }
+    }
+});
+
+const monthlyLabels = [{% for m in monthly %}"{{ m.month|date:'M Y' }}",{% endfor %}];
+const monthlyData = [{% for m in monthly %}{{ m.total }},{% endfor %}];
+
+new Chart(document.getElementById('monthlyChart'), {
+    type: 'bar',
+    data: {
+        labels: monthlyLabels,
+        datasets: [{
+            label: 'Monthly Sales (TZS)',
+            data: monthlyData,
+            backgroundColor: '#66bb6a',
+        }]
+    },
+    options: {
+        responsive: true,
+        plugins: {
+            legend: { display: true }
+        }
+    }
+});
+</script>
+
+</body>
+</html>
+
+{% endblock %}

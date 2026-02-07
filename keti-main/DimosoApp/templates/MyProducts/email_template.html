@@ -1,0 +1,111 @@
+
+{% load static %}
+{% load i18n %}
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <!---jqeury css link---->
+     <link rel="stylesheet" href="{% static 'DimosoApp/assets/jqueryui/jquery-ui.css' %}">
+    <link rel="stylesheet" href="{% static 'DimosoApp/assets/jqueryui/jquery-ui.structure.min.css' %}">
+    <link rel="stylesheet" href="{% static 'DimosoApp/assets/jqueryui/jquery-ui.structure.css' %}">
+    <link rel="stylesheet" href="{% static 'DimosoApp/assets/jqueryui/jquery-ui.theme.min.css' %}">
+     <link rel="stylesheet" href="{% static 'DimosoApp/assets/jqueryui/jquery-ui.theme.css' %}">
+
+ <!-- Vendor CSS Files ----->
+    <link href="{% static 'DimosoApp/assets/css/animate.min.css' %}" rel="stylesheet">
+    <link href="{% static 'DimosoApp/assets/css/bootstrap.min.css' %}" rel="stylesheet">
+  
+
+  
+    <link href="{% static 'DimosoApp/assets/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
+    <style type="text/css">
+      body{
+       
+
+      }
+
+      table tbody tr td,
+table thead tr th,
+table thead{
+  border-left: 2px solid black;
+  border-right:2px solid black;
+  border-bottom: 2px solid black;
+  border-top: 2px solid black; 
+}
+    </style>
+</head>
+<body>
+  
+   
+<center>
+
+<h1>Email from <span style="color: blue;font-weight: bold;">{{username}}</span></h1>
+
+
+</center>
+
+
+
+
+
+<center>
+  
+<div class="container">
+  
+  
+<h1 style="color: black;">KING STORE</h1>
+ 
+
+ <h2 style="color: blue;font-family: bold;font-weight: bold;">Received Email From: {{to}}</h2>
+ <h2 style="color: black;font-family: bold">UserName: {{username}}</h2>
+ <h2 style="color: black;font-family: bold">Phone Number: {{phone}}</h2>
+ <h2 style="color: black;font-family: bold">UserName: {{username}}</h2>
+
+ <h2 style="color: black;font-family: bold">Address: {{place}}</h2>
+ 
+
+
+  
+
+  
+
+
+
+
+
+<div class="col-md-4 mb-4">
+        {% include "MyProducts/snippet.html" %}
+      </div>
+  
+
+
+
+</div>
+
+</center>
+
+
+
+
+
+
+
+<!--jquery code for autocomplete javascriptcode---->
+<script src="{% static 'DimosoApp/assets/jqueryui/external/jquery/jquery.js' %}" type="text/javascript"></script>
+<script src="{% static 'DimosoApp/assets/jqueryui/jquery-ui.js' %}" type="text/javascript"></script>
+
+
+
+ 
+</body>
+</html>

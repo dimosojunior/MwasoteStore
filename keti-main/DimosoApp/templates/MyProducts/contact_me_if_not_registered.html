@@ -1,0 +1,124 @@
+{% extends 'MyProducts/base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% load i18n %}
+
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="main.css">
+
+         <!---jqeury css link---->
+     <link rel="stylesheet" href="{% static 'DimosoApp/assets/jqueryui/jquery-ui.css' %}">
+    <link rel="stylesheet" href="{% static 'DimosoApp/assets/jqueryui/jquery-ui.structure.min.css' %}">
+    <link rel="stylesheet" href="{% static 'DimosoApp/assets/jqueryui/jquery-ui.structure.css' %}">
+    <link rel="stylesheet" href="{% static 'DimosoApp/assets/jqueryui/jquery-ui.theme.min.css' %}">
+     <link rel="stylesheet" href="{% static 'DimosoApp/assets/jqueryui/jquery-ui.theme.css' %}">
+        <!-- font awesome -->
+        <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
+
+<style type="text/css">
+  form{
+    font-size: 22px;
+    border: 3px solid red;
+    background-color: #128C7E;
+    color: white;
+    font-family: bold;
+  }
+  input{
+    padding: 15px;
+  }
+
+
+</style>
+</head>
+    <body style="background-color: #128C7E;">
+
+<main class="mt-5 pt-4">
+  <div class="container wow fadeIn">
+    <h2 class="my-5 h2 text-center" style="color: white;">{% translate "MAKE CONTACT" %}</h2>
+    <div class="row">
+      <div class="col-md-12 mb-4">
+        <div class="card">
+<!-- 
+          <form action="" method="POST">
+            {% csrf_token %}
+            {{form|crispy}}
+            <button type="submit" class="btn btn-info">Submit</button>
+          </form> -->
+
+
+          <form class="card-body" method="POST">
+            {% csrf_token %}
+
+
+<!---
+    <div class="md-form mb-5">
+              <label for="street_address" class="">{% translate "Email" %}</label>
+              <input type="email" style="" name="email" id="" class="form-control" placeholder="Enter Valid Email" required>
+              
+            </div>
+
+              <div class="md-form mb-5">
+              <label for="street_address" class="">{% translate "Username" %}</label>
+              <input type="text" style="" name="username" id="" class="form-control" placeholder="Enter Valid Username" required>
+              
+            </div>
+
+            <div class="md-form mb-5">
+              <label for="street_address" class="">{% translate "Phone" %}</label>
+              <input type="text" style="" name="phone" id="" class="form-control" placeholder="Enter Valid Phone Number" required>
+              
+            </div>
+
+            <div class="md-form mb-5">
+              <label for="street_address" class="">{% translate "Place" %}</label>
+              <input type="text" style="" name="place" id="" class="form-control" placeholder="Where are you living??" required>
+              
+            </div>
+
+               <div class="md-form mb-5">
+              <label for="street_address" class="">{% translate "Message" %}</label><br>
+              <textarea name="message"></textarea> 
+              
+            </div>
+
+--->
+
+
+
+        {{form}}
+          
+
+          
+
+
+            <hr>
+           
+           
+            <hr class="mb-4">
+            <button class="btn btn-primary btn-lg btn-block" type="submit" style="font-size: 20px;">{% translate "Send Email" %}</button>
+          </form>
+        </div>
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      
+    </div>
+  </div>
+</main> 
+
+ </body>
+</html>
+
+
+{% endblock content %}
+  
+ 

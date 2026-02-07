@@ -1,0 +1,53 @@
+{% load i18n %}
+
+{% if order.items.all %}
+<h4 class="d-flex justify-content-between align-items-center mb-3">
+  <span class="text-" style="color: white;">{% translate "Your cart" %}</span>
+  <span class="badge badge-secondary badge-pill" style="color: red;">{{order.items.count}}</span>
+</h4>
+
+<!-- Cart -->
+<ul class="list-group mb-3 z-depth-1">
+  {% for order_item in order.items.all %}
+  <li class="list-group-item d-flex justify-content-between lh-condensed">
+    <div>
+      <h6 class="my-0">{{order_item.quantity}} x {{order_item.item.item_name}}</h6>
+      <small class="text-muted">{{order_item.item.description}}</small>
+    </div>
+    <span class="text-muted">${{order_item.get_final_price}}</span>
+  </li>
+  {% endfor %}
+  
+  {% if order.coupon %}
+  <li class="list-group-item d-flex justify-content-between bg-light">
+    <div class="text-success">
+      <h6 class="my-0">Promo code</h6>
+      <small>{{order.coupon.code}}</small>
+    </div>
+    <span class="text-success">-${{order.coupon.amount}}</span>
+  </li>
+  {% else %}
+  <li class="list-group-item d-flex justify-content-between bg-light">
+    <div class="text-success">
+    
+    </div>
+  </li>
+  {% endif %}
+  <li class="list-group-item d-flex justify-content-between">
+    <span style="color: red;font-size: 25px;font-weight: bold;">{% translate "Total (Tsh)" %}</span>
+    <strong>{{order.get_total}}/=</strong>
+  </li>
+</ul>
+
+  {% else %}
+  
+          <h4 class="mt-5 pt-4">{% translate "No items in your cart" %}</h4>
+          <a href="{% url 'home' %}" class="btn btn-primary" style="color: white;">{% translate "Continue Shopping" %}</a>
+          {% endif %}
+
+<!-- Cart -->
+
+<!-- Promo code -->
+
+
+<!-- Promo code -->

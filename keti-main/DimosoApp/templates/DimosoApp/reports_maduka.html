@@ -1,0 +1,278 @@
+{% load static %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Maduka Yote | Inventory System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+
+ <!-- Vendor CSS Files ----->
+    <link href="{% static 'DimosoApp/assets/css/animate.min.css' %}" rel="stylesheet">
+    <link href="{% static 'DimosoApp/assets/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'DimosoApp/assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  
+    <link href="{% static 'DimosoApp/assets/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
+  
+
+
+
+    <style>
+        body{
+            background: linear-gradient(120deg,#e8f5e9,#ffffff);
+            min-height: 100vh;
+        }
+
+        /* HEADER */
+        .page-header{
+            background: linear-gradient(135deg,#1b5e20,#66bb6a);
+            color: #fff;
+            padding: 60px 20px;
+            border-radius: 0 0 40px 40px;
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(0,0,0,.3);
+        }
+
+        .page-header h1{
+            font-weight: bold;
+        }
+
+        /* STORE CARD */
+        .store-card{
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0,0,0,.15);
+            transition: all .3s ease;
+            height: 100%;
+        }
+
+        .store-card:hover{
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px rgba(0,0,0,.25);
+        }
+
+        .store-image img{
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .store-body{
+            padding: 20px;
+        }
+
+        .store-body h5{
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .store-info{
+            font-size: 14px;
+            color: #555;
+        }
+
+        .store-actions a{
+            display: inline-block;
+            margin-right: 10px;
+            padding: 10px 14px;
+            border-radius: 50%;
+            transition: .3s;
+            font-size: 16px;
+        }
+
+        .store-actions a.view{
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+
+        .store-actions a.products{
+            background: #e3f2fd;
+            color: #1565c0;
+        }
+
+        .store-actions a:hover{
+            transform: scale(1.15);
+        }
+
+
+
+
+
+
+/*--------------------------------------------------------------
+# Global Footer
+--------------------------------------------------------------*/
+.footer {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  font-size: 14px;
+  text-align: center;
+  padding: 30px 0;
+  position: relative;
+}
+
+.footer h3 {
+  font-size: 36px;
+  font-weight: 700;
+  position: relative;
+  padding: 0;
+  margin: 0 0 15px 0;
+}
+
+.footer p {
+  font-size: 15;
+  font-style: italic;
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+
+.footer .social-links {
+  margin: 0 0 30px 0;
+}
+
+.footer .social-links a {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  line-height: 1;
+  margin: 0 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+
+.footer .social-links a:hover {
+  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+  text-decoration: none;
+}
+
+.footer .copyright {
+  padding-top: 25px;
+  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+}
+
+.footer .credits {
+  font-size: 13px;
+  padding-top: 5px;
+}
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="page-header">
+    <h1><i class="fa fa-store"></i>Reports Maduka Yote</h1>
+    <p>Orodha ya maduka yote yaliyopo kwenye mfumo wako</p>
+</div>
+
+<!-- CONTENT -->
+<div class="container my-5">
+    {% if maduka %}
+    <div class="row g-4">
+
+        <!-- STORE 1 -->
+        {% for x in maduka %}
+        <div class="col-lg-4 col-md-6">
+            <div class="store-card">
+                 {% if x.image %}
+                  <div class="store-image">
+                    <img src="{{x.image.url}}">
+                </div>
+                {% else %}
+                 <div class="store-image">
+                    <img src="https://images.unsplash.com/photo-1586864387789-628af9feed72">
+                </div>
+
+                {% endif %}
+
+                
+                <div class="store-body">
+                    <h5>{{x.ShopName}}</h5>
+                    <p class="store-info">
+                        <i class="fa fa-location-dot"></i> {{x.ShopLocation}} <br>
+                        {% if x.Quantity %}
+                        <i class="fa fa-box"></i> Products: {{x.Quantity}}
+                        {% endif %}
+                    </p>
+                    <div class="store-actions mt-3">
+                        <a href="{% url 'reports' %}?shop={{ x.id }}" class="view" title="View Store">
+                            <i class="fa fa-eye"></i>
+                        </a>
+                        <a href="#" class="products" title="View Products">
+                            <i class="fa fa-boxes-stacked"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+    
+
+    </div>
+
+    {% else %}
+
+      <h3 class="text-center text-danger">
+            {% translate "There is no any data" %}
+        </h3>
+
+
+     {% endif %}
+</div>
+
+
+
+
+  <footer id="footer" class="footer dark-background">
+    <div class="container">
+      <h3 class="sitename">Mwasote Store</h3>
+      <p>Mwasote Pembejeo Za Kilimo is a modern inventory management system designed to efficiently manage agricultural input stocks. It enables real-time tracking of products, stores, sales, and purchases. The system helps improve operational efficiency and reduce stock losses</p>
+      <div class="social-links d-flex justify-content-center">
+        <a href=""><i class="bi bi-twitter-x"></i></a>
+        <a href=""><i class="bi bi-facebook"></i></a>
+        <a href=""><i class="bi bi-instagram"></i></a>
+        <a href=""><i class="bi bi-skype"></i></a>
+        <a href=""><i class="bi bi-linkedin"></i></a>
+      </div>
+      <div class="container">
+        <div class="copyright">
+          <span>Copyright</span> <strong class="px-1 sitename">Mwasote Pembejeo Za Kilimo</strong> <span>All Rights Reserved</span>
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you've purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+          Designed by <a href="#">Our developers</a> 
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

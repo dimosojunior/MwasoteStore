@@ -1,0 +1,1560 @@
+#
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-06-04 21:38+0300\n"
+"Last-Translator:   <juniordimoso8@gmail.com>\n"
+"X-Translated-Using: django-rosetta 0.9.8\n"
+
+#: .\DimosoApp\templates\Account\registration.html:5
+#: .\DimosoApp\templates\MyProducts\base.html:295
+msgid "Register"
+msgstr "Jisajili"
+
+#: .\DimosoApp\templates\Account\registration.html:132
+msgid "Registration Form"
+msgstr "Fomu ya Usajili"
+
+#: .\DimosoApp\templates\Account\registration.html:138
+msgid "Valid Email"
+msgstr "Weka Email Sahihi"
+
+#: .\DimosoApp\templates\Account\registration.html:145
+msgid "Enter UserName"
+msgstr "Ingiza Jina Unalotumia"
+
+#: .\DimosoApp\templates\Account\registration.html:153
+msgid "Enter Strong Password"
+msgstr "Ingiza Password Imara"
+
+#: .\DimosoApp\templates\Account\registration.html:159
+msgid "Confirm Password"
+msgstr "Thibitisha Password"
+
+#: .\DimosoApp\templates\Account\registration.html:181
+msgid "Already a member?"
+msgstr "Teyari Umeshajisajili ?"
+
+#: .\DimosoApp\templates\Account\registration.html:181
+msgid "Login now"
+msgstr "Ingia Sasa"
+
+#: .\DimosoApp\templates\Account\user_login.html:6
+msgid "login"
+msgstr "Ingia"
+
+#: .\DimosoApp\templates\Account\user_login.html:134
+msgid "Login Form"
+msgstr "Fomu Ya Kuingia"
+
+#: .\DimosoApp\templates\Account\user_login.html:162
+msgid "Not a member?"
+msgstr "Hujajisajili Bado ??"
+
+#: .\DimosoApp\templates\Account\user_login.html:162
+msgid "Register now"
+msgstr "Jisajili Sasa"
+
+#: .\DimosoApp\templates\DimosoApp\add_items.html:5
+#: .\DimosoApp\templates\DimosoApp\stock.html:83
+msgid "Add Item"
+msgstr "Ongeza Bidhaa"
+
+#: .\DimosoApp\templates\DimosoApp\add_items.html:153
+#: .\DimosoApp\templates\MyProducts\base.html:446
+msgid "Add Items"
+msgstr "Ongeza Bidhaa"
+
+#: .\DimosoApp\templates\DimosoApp\delete_items.html:5
+msgid "Delete Items"
+msgstr "Futa Bidhaa"
+
+#: .\DimosoApp\templates\DimosoApp\delete_items.html:141
+msgid "Delete Item from a stock"
+msgstr "Futa Bidhaa Iliyopo Dukani"
+
+#: .\DimosoApp\templates\DimosoApp\delete_items.html:145
+msgid "Are you sure you want to delete this Item ???"
+msgstr "Ni kweli unataka kufuta hii Bidhaa ???"
+
+#: .\DimosoApp\templates\DimosoApp\delete_items.html:148
+msgid "Yes"
+msgstr "Ndio"
+
+#: .\DimosoApp\templates\DimosoApp\delete_items.html:151
+msgid "Cancel"
+msgstr "Acha"
+
+#: .\DimosoApp\templates\DimosoApp\ending_products.html:9
+msgid "EndingProducts page"
+msgstr "Kurasa ya Bidhaa Zinazoisha"
+
+#: .\DimosoApp\templates\DimosoApp\ending_products.html:84
+msgid "LIST OF ALL ENDING ITEMS"
+msgstr "ORODHA YA BIDHAA ZOTE ZINAZOISHA"
+
+#: .\DimosoApp\templates\DimosoApp\ending_products.html:97
+#: .\DimosoApp\templates\DimosoApp\issued_items_history.html:95
+#: .\DimosoApp\templates\DimosoApp\received_items_history.html:98
+#: .\DimosoApp\templates\DimosoApp\stock.html:120
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_1.html:95
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_10.html:95
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_11.html:95
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_12.html:95
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_2.html:95
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_3.html:95
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_4.html:95
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_5.html:95
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_6.html:95
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_7.html:95
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_8.html:95
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_9.html:95
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_today.html:95
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_1.html:98
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_10.html:98
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_11.html:98
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_12.html:98
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_2.html:98
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_3.html:98
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_4.html:98
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_5.html:98
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_6.html:98
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_7.html:98
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_8.html:98
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_9.html:98
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_today.html:101
+msgid "No"
+msgstr "Namba"
+
+#: .\DimosoApp\templates\DimosoApp\ending_products.html:98
+#: .\DimosoApp\templates\DimosoApp\issued_items_history.html:97
+#: .\DimosoApp\templates\DimosoApp\stock.html:121
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_1.html:97
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_10.html:97
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_11.html:97
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_12.html:97
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_2.html:97
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_3.html:97
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_4.html:97
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_5.html:97
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_6.html:97
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_7.html:97
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_8.html:97
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_9.html:97
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_today.html:97
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_1.html:100
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_10.html:100
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_11.html:100
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_12.html:100
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_2.html:100
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_3.html:100
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_4.html:100
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_5.html:100
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_6.html:100
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_7.html:100
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_8.html:100
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_9.html:100
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_today.html:103
+msgid "Item<br> Name"
+msgstr "Jina La Bidhaa"
+
+#: .\DimosoApp\templates\DimosoApp\ending_products.html:99
+#: .\DimosoApp\templates\DimosoApp\issued_items_history.html:96
+#: .\DimosoApp\templates\DimosoApp\received_items_history.html:99
+#: .\DimosoApp\templates\DimosoApp\stock.html:122
+msgid "Category<br> Name"
+msgstr "Aina ya Bidhaa"
+
+#: .\DimosoApp\templates\DimosoApp\ending_products.html:100
+#: .\DimosoApp\templates\DimosoApp\stock.html:123
+msgid "Quantity<br>In Store"
+msgstr "Kiasi Kilichopo Dukani"
+
+#: .\DimosoApp\templates\DimosoApp\ending_products.html:101
+#: .\DimosoApp\templates\DimosoApp\stock.html:124
+msgid "Re-Order<br> Level"
+msgstr "Kiasi Hatarishi"
+
+#: .\DimosoApp\templates\DimosoApp\ending_products.html:103
+#: .\DimosoApp\templates\DimosoApp\stock.html:126
+msgid "Perform<br>Action"
+msgstr "Tendo"
+
+#: .\DimosoApp\templates\DimosoApp\ending_products.html:129
+#: .\DimosoApp\templates\DimosoApp\ending_products.html:136
+msgid "View"
+msgstr "Angalia"
+
+#: .\DimosoApp\templates\DimosoApp\ending_products.html:130
+#: .\DimosoApp\templates\DimosoApp\stock.html:157
+msgid "Update"
+msgstr "Badilisha"
+
+#: .\DimosoApp\templates\DimosoApp\ending_products.html:132
+#: .\DimosoApp\templates\DimosoApp\stock.html:159
+msgid "Delete"
+msgstr "Futa"
+
+#: .\DimosoApp\templates\DimosoApp\ending_products.html:137
+msgid "Only admin"
+msgstr "Admini Tu"
+
+#: .\DimosoApp\templates\DimosoApp\ending_products.html:154
+msgid "There is no Any Item below Reorder level in a Stock"
+msgstr "Hakuna Bidhaa Yoyote inayokaribia kuisha"
+
+#: .\DimosoApp\templates\DimosoApp\issue_items.html:5
+#: .\DimosoApp\templates\DimosoApp\issue_items.html:132
+msgid "Issue Items"
+msgstr "Toa Bidhaa"
+
+#: .\DimosoApp\templates\DimosoApp\issued_amount.html:5
+#: .\DimosoApp\templates\DimosoApp\issued_amount.html:132
+msgid "Issued Amount"
+msgstr "Pesa Uliyonunulia"
+
+#: .\DimosoApp\templates\DimosoApp\issued_items_history.html:9
+msgid "Issued Items"
+msgstr "Bidhaa Zilizouzwa"
+
+#: .\DimosoApp\templates\DimosoApp\issued_items_history.html:82
+msgid "LIST OF ALL ISSUED ITEMS FOR THE YEAR"
+msgstr "ORODHA YA BIDHAA ZOTE ZILIZOUZWA KWA MWAKA"
+
+#: .\DimosoApp\templates\DimosoApp\issued_items_history.html:98
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_1.html:98
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_10.html:98
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_11.html:98
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_12.html:98
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_2.html:98
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_3.html:98
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_4.html:98
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_5.html:98
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_6.html:98
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_7.html:98
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_8.html:98
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_9.html:98
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_today.html:98
+msgid "Issued<br> Quantity"
+msgstr "Kiasi Ulichouza"
+
+#: .\DimosoApp\templates\DimosoApp\issued_items_history.html:100
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_1.html:101
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_10.html:101
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_11.html:101
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_12.html:101
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_2.html:101
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_3.html:101
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_4.html:101
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_5.html:101
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_6.html:101
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_7.html:101
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_8.html:101
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_9.html:101
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_today.html:101
+msgid "Sales <br> Amount"
+msgstr "Pesa ya Mauzo"
+
+#: .\DimosoApp\templates\DimosoApp\issued_items_history.html:101
+msgid "Issued <br> date"
+msgstr "Tarehe Iliyouzwa"
+
+#: .\DimosoApp\templates\DimosoApp\issued_items_history.html:102
+#: .\DimosoApp\templates\DimosoApp\received_items_history.html:105
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_1.html:104
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_10.html:104
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_11.html:104
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_12.html:104
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_2.html:104
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_3.html:104
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_4.html:104
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_5.html:104
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_6.html:104
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_7.html:104
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_8.html:104
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_9.html:104
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_today.html:104
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_1.html:106
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_10.html:106
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_11.html:106
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_12.html:106
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_2.html:106
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_3.html:106
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_4.html:106
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_5.html:106
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_6.html:106
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_7.html:106
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_8.html:106
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_9.html:106
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_today.html:109
+msgid "Last <br> Updated"
+msgstr "Badiliko la Mwisho"
+
+#: .\DimosoApp\templates\DimosoApp\issued_items_history.html:156
+#: .\DimosoApp\templates\DimosoApp\point_of_sales.html:85
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_1.html:159
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_10.html:158
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_11.html:159
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_12.html:159
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_2.html:158
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_3.html:158
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_4.html:159
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_5.html:158
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_6.html:158
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_7.html:157
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_8.html:159
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_9.html:159
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_today.html:159
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_1.html:85
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_10.html:85
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_11.html:85
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_12.html:85
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_2.html:85
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_3.html:85
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_4.html:85
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_5.html:85
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_6.html:85
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_7.html:85
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_8.html:85
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_9.html:85
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_today.html:87
+msgid "Total Sales"
+msgstr "Jumla Ya Mauzo"
+
+#: .\DimosoApp\templates\DimosoApp\issued_items_history.html:157
+#: .\DimosoApp\templates\DimosoApp\point_of_sales.html:86
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_1.html:160
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_10.html:159
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_11.html:160
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_12.html:160
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_2.html:159
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_3.html:159
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_4.html:160
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_5.html:159
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_6.html:159
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_7.html:158
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_8.html:160
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_9.html:160
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_today.html:160
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_1.html:86
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_10.html:86
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_11.html:86
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_12.html:86
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_2.html:86
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_3.html:86
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_4.html:86
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_5.html:86
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_6.html:86
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_7.html:86
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_8.html:86
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_9.html:86
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_today.html:88
+msgid "Minimum Sales"
+msgstr "Mauzo ya Chini"
+
+#: .\DimosoApp\templates\DimosoApp\issued_items_history.html:158
+#: .\DimosoApp\templates\DimosoApp\point_of_sales.html:87
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_1.html:161
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_10.html:160
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_11.html:161
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_12.html:161
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_2.html:160
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_3.html:160
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_4.html:161
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_5.html:160
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_6.html:160
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_7.html:159
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_8.html:161
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_9.html:161
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_today.html:161
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_1.html:87
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_10.html:87
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_11.html:87
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_12.html:87
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_2.html:87
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_3.html:87
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_4.html:87
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_5.html:87
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_6.html:87
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_7.html:87
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_8.html:87
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_9.html:87
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_today.html:89
+msgid "Maximum Sales"
+msgstr "Mauzo ya Juu"
+
+#: .\DimosoApp\templates\DimosoApp\issued_items_history.html:159
+#: .\DimosoApp\templates\DimosoApp\point_of_sales.html:88
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_1.html:162
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_10.html:161
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_11.html:162
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_12.html:162
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_2.html:161
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_3.html:161
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_4.html:162
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_5.html:161
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_6.html:161
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_7.html:160
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_8.html:162
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_9.html:162
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_today.html:162
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_1.html:88
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_10.html:88
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_11.html:88
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_12.html:88
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_2.html:88
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_3.html:88
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_4.html:88
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_5.html:88
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_6.html:88
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_7.html:88
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_8.html:88
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_9.html:88
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_today.html:90
+msgid "Sales Average"
+msgstr "Wastani wa Mauzo"
+
+#: .\DimosoApp\templates\DimosoApp\issued_items_history.html:164
+#: .\DimosoApp\templates\DimosoApp\received_items_history.html:169
+#: .\DimosoApp\templates\DimosoApp\stock.html:179
+#: .\DimosoApp\templates\DimosoApp\stock_detailpage.html:178
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_1.html:173
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_10.html:172
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_11.html:173
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_12.html:172
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_2.html:173
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_3.html:172
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_4.html:173
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_5.html:173
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_6.html:173
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_7.html:173
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_8.html:173
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_9.html:173
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_today.html:175
+msgid "There is no Any Item in a Stock"
+msgstr "Hakuna Bidhaa Yoyote Dukani"
+
+#: .\DimosoApp\templates\DimosoApp\issued_items_history.html:172
+#: .\DimosoApp\templates\DimosoApp\received_items_history.html:179
+#: .\DimosoApp\templates\DimosoApp\stock.html:189
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_1.html:174
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_10.html:174
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_11.html:176
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_12.html:176
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_2.html:175
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_3.html:174
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_4.html:175
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_5.html:173
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_6.html:173
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_7.html:173
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_8.html:175
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_9.html:174
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_today.html:174
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_1.html:182
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_10.html:181
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_11.html:182
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_12.html:181
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_2.html:182
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_3.html:181
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_4.html:182
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_5.html:182
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_6.html:182
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_7.html:182
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_8.html:182
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_9.html:182
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_today.html:184
+msgid "page"
+msgstr "Kurasa"
+
+#: .\DimosoApp\templates\DimosoApp\issued_items_history.html:172
+#: .\DimosoApp\templates\DimosoApp\received_items_history.html:179
+#: .\DimosoApp\templates\DimosoApp\stock.html:189
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_1.html:174
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_10.html:174
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_11.html:176
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_12.html:176
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_2.html:175
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_3.html:174
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_4.html:175
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_5.html:173
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_6.html:173
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_7.html:173
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_8.html:175
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_9.html:174
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_today.html:174
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_1.html:182
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_10.html:181
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_11.html:182
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_12.html:181
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_2.html:182
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_3.html:181
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_4.html:182
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_5.html:182
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_6.html:182
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_7.html:182
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_8.html:182
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_9.html:182
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_today.html:184
+msgid "of"
+msgstr "Ya"
+
+#: .\DimosoApp\templates\DimosoApp\issued_items_history.html:174
+#: .\DimosoApp\templates\DimosoApp\received_items_history.html:181
+#: .\DimosoApp\templates\DimosoApp\stock.html:191
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_1.html:176
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_10.html:176
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_11.html:178
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_12.html:178
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_2.html:177
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_3.html:176
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_4.html:177
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_5.html:175
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_6.html:175
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_7.html:175
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_8.html:177
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_9.html:176
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_today.html:176
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_1.html:184
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_10.html:183
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_11.html:184
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_12.html:183
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_2.html:184
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_3.html:183
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_4.html:184
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_5.html:184
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_6.html:184
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_7.html:184
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_8.html:184
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_9.html:184
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_today.html:186
+msgid "First"
+msgstr "Mwanzo"
+
+#: .\DimosoApp\templates\DimosoApp\issued_items_history.html:175
+#: .\DimosoApp\templates\DimosoApp\received_items_history.html:182
+#: .\DimosoApp\templates\DimosoApp\stock.html:192
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_1.html:177
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_10.html:177
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_11.html:179
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_12.html:179
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_2.html:178
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_3.html:177
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_4.html:178
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_5.html:176
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_6.html:176
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_7.html:176
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_8.html:178
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_9.html:177
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_today.html:177
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_1.html:185
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_10.html:184
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_11.html:185
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_12.html:184
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_2.html:185
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_3.html:184
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_4.html:185
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_5.html:185
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_6.html:185
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_7.html:185
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_8.html:185
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_9.html:185
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_today.html:187
+msgid "Previous"
+msgstr "Nyuma"
+
+#: .\DimosoApp\templates\DimosoApp\issued_items_history.html:181
+#: .\DimosoApp\templates\DimosoApp\received_items_history.html:188
+#: .\DimosoApp\templates\DimosoApp\stock.html:198
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_1.html:183
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_10.html:183
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_11.html:185
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_12.html:185
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_2.html:184
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_3.html:183
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_4.html:184
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_5.html:182
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_6.html:182
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_7.html:182
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_8.html:184
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_9.html:183
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_today.html:183
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_1.html:191
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_10.html:190
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_11.html:191
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_12.html:190
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_2.html:191
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_3.html:190
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_4.html:191
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_5.html:191
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_6.html:191
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_7.html:191
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_8.html:191
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_9.html:191
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_today.html:193
+msgid "Next"
+msgstr "Mbele"
+
+#: .\DimosoApp\templates\DimosoApp\issued_items_history.html:182
+#: .\DimosoApp\templates\DimosoApp\received_items_history.html:189
+#: .\DimosoApp\templates\DimosoApp\stock.html:199
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_1.html:184
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_10.html:184
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_11.html:186
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_12.html:186
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_2.html:185
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_3.html:184
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_4.html:185
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_5.html:183
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_6.html:183
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_7.html:183
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_8.html:185
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_9.html:184
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_today.html:184
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_1.html:192
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_10.html:191
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_11.html:192
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_12.html:191
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_2.html:192
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_3.html:191
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_4.html:192
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_5.html:192
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_6.html:192
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_7.html:192
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_8.html:192
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_9.html:192
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_today.html:194
+msgid "Last"
+msgstr "Mwisho"
+
+#: .\DimosoApp\templates\DimosoApp\point_of_sales.html:10
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_1.html:10
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_10.html:10
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_11.html:10
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_12.html:10
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_2.html:10
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_3.html:10
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_4.html:10
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_5.html:10
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_6.html:10
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_7.html:10
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_8.html:10
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_9.html:10
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_today.html:10
+msgid "Point of Sales"
+msgstr "Mauzo na Manunuzi"
+
+#: .\DimosoApp\templates\DimosoApp\point_of_sales.html:80
+msgid "POINT OF SALES FOR THE YEAR"
+msgstr "MAUZO NA MANUNUZI KWA MWAKA"
+
+#: .\DimosoApp\templates\DimosoApp\point_of_sales.html:101
+#: .\DimosoApp\templates\DimosoApp\received_items_history.html:161
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_1.html:101
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_10.html:101
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_11.html:101
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_12.html:101
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_2.html:101
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_3.html:101
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_4.html:101
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_5.html:101
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_6.html:101
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_7.html:101
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_8.html:101
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_9.html:101
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_today.html:103
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_1.html:163
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_10.html:162
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_11.html:163
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_12.html:162
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_2.html:163
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_3.html:162
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_4.html:163
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_5.html:163
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_6.html:163
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_7.html:163
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_8.html:163
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_9.html:163
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_today.html:165
+msgid "Total Purchasing"
+msgstr "Jumla ya Manunuzi"
+
+#: .\DimosoApp\templates\DimosoApp\point_of_sales.html:102
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_1.html:102
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_10.html:102
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_11.html:102
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_12.html:102
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_2.html:102
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_3.html:102
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_4.html:102
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_5.html:102
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_6.html:102
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_7.html:102
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_8.html:102
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_9.html:102
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_today.html:104
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_1.html:164
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_10.html:163
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_11.html:164
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_12.html:163
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_2.html:164
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_3.html:163
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_4.html:164
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_5.html:164
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_6.html:164
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_7.html:164
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_8.html:164
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_9.html:164
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_today.html:166
+msgid "Minimum Purchasing"
+msgstr "Manunuzi ya Chini"
+
+#: .\DimosoApp\templates\DimosoApp\point_of_sales.html:103
+#: .\DimosoApp\templates\DimosoApp\received_items_history.html:163
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_1.html:103
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_10.html:103
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_11.html:103
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_12.html:103
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_2.html:103
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_3.html:103
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_4.html:103
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_5.html:103
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_6.html:103
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_7.html:103
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_8.html:103
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_9.html:103
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_today.html:105
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_1.html:165
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_10.html:164
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_11.html:165
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_12.html:164
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_2.html:165
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_3.html:164
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_4.html:165
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_5.html:165
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_6.html:165
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_7.html:165
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_8.html:165
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_9.html:165
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_today.html:167
+msgid "Maximum Purchasing"
+msgstr "Manunuzi ya Juu"
+
+#: .\DimosoApp\templates\DimosoApp\point_of_sales.html:104
+#: .\DimosoApp\templates\DimosoApp\received_items_history.html:164
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_1.html:104
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_10.html:104
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_11.html:104
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_12.html:104
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_2.html:104
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_3.html:104
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_4.html:104
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_5.html:104
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_6.html:104
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_7.html:104
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_8.html:104
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_9.html:104
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_today.html:106
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_1.html:166
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_10.html:165
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_11.html:166
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_12.html:165
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_2.html:166
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_3.html:165
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_4.html:166
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_5.html:166
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_6.html:166
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_7.html:166
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_8.html:166
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_9.html:166
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_today.html:168
+msgid "Purchasing Average"
+msgstr "Wastani wa Manunuzi"
+
+#: .\DimosoApp\templates\DimosoApp\point_of_sales.html:117
+msgid "Profit of Tsh"
+msgstr "Faida ya Tsh"
+
+#: .\DimosoApp\templates\DimosoApp\point_of_sales.html:120
+msgid "Loss of Tsh"
+msgstr "Hasara ya Tsh"
+
+#: .\DimosoApp\templates\DimosoApp\point_of_sales.html:136
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_1.html:137
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_10.html:136
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_11.html:137
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_12.html:137
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_2.html:136
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_3.html:137
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_4.html:136
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_5.html:135
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_6.html:135
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_7.html:136
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_8.html:136
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_9.html:137
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_today.html:138
+msgid "NO ANY TRANSACTION MADE"
+msgstr "Hakuna Biashara yoyote Iliyofanyika"
+
+#: .\DimosoApp\templates\DimosoApp\receive_amount.html:5
+#: .\DimosoApp\templates\DimosoApp\receive_amount.html:132
+msgid "Receive Amount"
+msgstr "Pokea Pesa"
+
+#: .\DimosoApp\templates\DimosoApp\receive_items.html:5
+msgid "Receive Item"
+msgstr "Pokea Bidha"
+
+#: .\DimosoApp\templates\DimosoApp\receive_items.html:132
+msgid "Receive Items"
+msgstr "Pokea Bidhaa"
+
+#: .\DimosoApp\templates\DimosoApp\received_items_history.html:9
+#: .\DimosoApp\templates\MyProducts\base.html:536
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_1.html:9
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_10.html:9
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_11.html:9
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_12.html:9
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_2.html:9
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_3.html:9
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_4.html:9
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_5.html:9
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_6.html:9
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_7.html:9
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_8.html:9
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_9.html:9
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_today.html:10
+msgid "Received Items History"
+msgstr "Bidhaa zote Zilizonunuliwa"
+
+#: .\DimosoApp\templates\DimosoApp\received_items_history.html:85
+msgid "LIST OF ALL RECEIVED ITEMS FOR THE YEAR"
+msgstr "ORODHA YA BIDHAA ZOTE ZILIZONUNUNLIWA KWA MWAKA"
+
+#: .\DimosoApp\templates\DimosoApp\received_items_history.html:101
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_1.html:101
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_10.html:101
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_11.html:101
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_12.html:101
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_2.html:101
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_3.html:101
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_4.html:101
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_5.html:101
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_6.html:101
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_7.html:101
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_8.html:101
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_9.html:101
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_today.html:104
+msgid "Receiving<br> Quantity"
+msgstr "Kiasi Ulichopokea"
+
+#: .\DimosoApp\templates\DimosoApp\received_items_history.html:102
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_1.html:103
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_10.html:103
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_11.html:103
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_12.html:103
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_2.html:103
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_3.html:103
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_4.html:103
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_5.html:103
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_6.html:103
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_7.html:103
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_8.html:103
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_9.html:103
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_today.html:106
+msgid "Received<br> By"
+msgstr "Kimepokelewa Na"
+
+#: .\DimosoApp\templates\DimosoApp\received_items_history.html:103
+msgid "Purchasing <br> Amount"
+msgstr "Pesa ya Manunuzi"
+
+#: .\DimosoApp\templates\DimosoApp\received_items_history.html:104
+msgid "received <br> date"
+msgstr "Tarehe Iliyopokelewa"
+
+#: .\DimosoApp\templates\DimosoApp\received_items_history.html:162
+msgid "Minimum Purchasing "
+msgstr "Manunuzi ya Chini"
+
+#: .\DimosoApp\templates\DimosoApp\reorder_level.html:5
+msgid "Reorder Level"
+msgstr "Kiasi Hatarishi"
+
+#: .\DimosoApp\templates\DimosoApp\reorder_level.html:132
+msgid "Create Re-Order Level of  Items"
+msgstr "Weka kiasi Hatarishi cha Bidhaa"
+
+#: .\DimosoApp\templates\DimosoApp\stock.html:9
+msgid "Stock page"
+msgstr "Kurasa Ya Dukani"
+
+#: .\DimosoApp\templates\DimosoApp\stock.html:85
+msgid "Only Admin"
+msgstr "Admini Tu"
+
+#: .\DimosoApp\templates\DimosoApp\stock.html:93
+#: .\DimosoApp\templates\MyProducts\home.html:509
+msgid "Search"
+msgstr "Tafuta"
+
+#: .\DimosoApp\templates\DimosoApp\stock.html:107
+msgid "LIST OF ALL ITEMS"
+msgstr "ORODHA YA BIDHAA ZOTE"
+
+#: .\DimosoApp\templates\DimosoApp\stock.html:156
+#: .\DimosoApp\templates\DimosoApp\stock.html:164
+msgid " View"
+msgstr "Angalia"
+
+#: .\DimosoApp\templates\DimosoApp\stock.html:165
+msgid " Only admin"
+msgstr "Admini Tu"
+
+#: .\DimosoApp\templates\DimosoApp\stock_detailpage.html:9
+msgid "Stock Detail"
+msgstr "Taarifa Ya Bidhaa"
+
+#: .\DimosoApp\templates\DimosoApp\stock_detailpage.html:79
+msgid "ISSUE THIS ITEM"
+msgstr "UZA HII BIDHAA"
+
+#: .\DimosoApp\templates\DimosoApp\stock_detailpage.html:81
+msgid "RECEIVE THIS ITEM"
+msgstr "NUNUA HII BIDHAA"
+
+#: .\DimosoApp\templates\DimosoApp\stock_detailpage.html:83
+msgid "ONYL ADMIN CAN ISSUE THIS ITEM"
+msgstr "ADMINI TU ANAWEZA KUTOA HII BIDHAA"
+
+#: .\DimosoApp\templates\DimosoApp\stock_detailpage.html:85
+msgid "ONYL ADMIN CAN RECEIVE THIS ITEM"
+msgstr "ADMINI TU ANAWEZA KUPOKEA HII BIDHAA"
+
+#: .\DimosoApp\templates\DimosoApp\stock_detailpage.html:115
+msgid "Item Name"
+msgstr "Jina la Bidhaa"
+
+#: .\DimosoApp\templates\DimosoApp\stock_detailpage.html:116
+msgid "Category"
+msgstr "Aina"
+
+#: .\DimosoApp\templates\DimosoApp\stock_detailpage.html:117
+#: .\DimosoApp\templates\MyProducts\order_summary.html:53
+msgid "Quantity"
+msgstr "Kiasi"
+
+#: .\DimosoApp\templates\DimosoApp\stock_detailpage.html:118
+msgid "ReOrder Level"
+msgstr "Kiasi Hatarishi"
+
+#: .\DimosoApp\templates\DimosoApp\stock_detailpage.html:119
+msgid "Sales Amount"
+msgstr "Pesa Ya Mauzo"
+
+#: .\DimosoApp\templates\DimosoApp\stock_detailpage.html:120
+msgid "Purchasing Amount"
+msgstr "Pesa ya Manunuzi"
+
+#: .\DimosoApp\templates\DimosoApp\stock_detailpage.html:122
+msgid "Added When"
+msgstr "Kiliwekwa Lini"
+
+#: .\DimosoApp\templates\DimosoApp\stock_detailpage.html:123
+msgid "Last Updated"
+msgstr "Badiliko la Mwisho"
+
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_1.html:9
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_10.html:9
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_11.html:9
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_12.html:9
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_2.html:9
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_3.html:9
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_4.html:9
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_5.html:9
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_6.html:9
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_7.html:9
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_8.html:9
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_9.html:9
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_today.html:9
+msgid "Issued Item History"
+msgstr "Bidhaa Zote Zilizouzwa"
+
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_1.html:82
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_10.html:82
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_11.html:82
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_12.html:82
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_2.html:82
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_3.html:82
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_4.html:82
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_5.html:82
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_6.html:82
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_7.html:82
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_8.html:82
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_9.html:82
+msgid "LIST OF ALL ISSUED ITEMS FOR THE MONTH"
+msgstr "ORODHA YA BIDHAA ZOTE ZILIZOUZWA KWA MWEZI WA"
+
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_1.html:99
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_10.html:99
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_11.html:99
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_12.html:99
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_2.html:99
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_3.html:99
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_4.html:99
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_5.html:99
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_6.html:99
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_7.html:99
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_8.html:99
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_9.html:99
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_today.html:99
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_1.html:102
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_10.html:102
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_11.html:102
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_12.html:102
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_2.html:102
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_3.html:102
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_4.html:102
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_5.html:102
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_6.html:102
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_7.html:102
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_8.html:102
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_9.html:102
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_today.html:105
+msgid "Total Quantity<br> In Store"
+msgstr "Jumla ya kiasi Dukani"
+
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_1.html:100
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_10.html:100
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_11.html:100
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_12.html:100
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_2.html:100
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_3.html:100
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_4.html:100
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_5.html:100
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_6.html:100
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_7.html:100
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_8.html:100
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_9.html:100
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_today.html:100
+msgid "Issued<br> By"
+msgstr "Imetolewa Na"
+
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_1.html:102
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_10.html:102
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_11.html:102
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_12.html:102
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_2.html:102
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_3.html:102
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_4.html:102
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_5.html:102
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_6.html:102
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_7.html:102
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_8.html:102
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_9.html:102
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_today.html:102
+msgid "Last <br> Sales"
+msgstr "Mauzo ya Mwisho"
+
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_1.html:167
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_10.html:166
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_11.html:167
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_12.html:167
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_2.html:165
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_3.html:166
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_4.html:167
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_5.html:166
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_6.html:166
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_7.html:165
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_8.html:167
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_9.html:167
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_today.html:167
+msgid "There is no Any Item issued from a Stock"
+msgstr "Hakuna Bidhaa yoyote iliyouzwa Dukani"
+
+#: .\DimosoApp\templates\ISSUED_ITEMS_MONTHS\issued_items_history_today.html:82
+msgid "LIST OF ALL ISSUED ITEMS TODAY"
+msgstr "ORODHA YA BIDHAA ZOTE ZILIZOUZWA LEO"
+
+#: .\DimosoApp\templates\MyProducts\base.html:12
+msgid "Stock Management System"
+msgstr "MFUMO WA KUTUNZA TAARIFA ZA BIDHAA"
+
+#: .\DimosoApp\templates\MyProducts\base.html:172
+msgid "Home"
+msgstr "Nyumbani"
+
+#: .\DimosoApp\templates\MyProducts\base.html:184
+msgid "More"
+msgstr "Zaidi"
+
+#: .\DimosoApp\templates\MyProducts\base.html:188
+msgid "Sign-In/Up"
+msgstr "Ingia/Jisajili"
+
+#: .\DimosoApp\templates\MyProducts\base.html:237
+msgid "Language"
+msgstr "Lugha"
+
+#: .\DimosoApp\templates\MyProducts\base.html:247
+msgid "Change Language"
+msgstr "Badilisha Lugha"
+
+#: .\DimosoApp\templates\MyProducts\base.html:289
+msgid "LogOut"
+msgstr "Toka"
+
+#: .\DimosoApp\templates\MyProducts\base.html:292
+msgid "Login"
+msgstr "Ingia"
+
+#: .\DimosoApp\templates\MyProducts\base.html:324
+#: .\DimosoApp\templates\MyProducts\home.html:462
+msgid "Close"
+msgstr "Funga"
+
+#: .\DimosoApp\templates\MyProducts\base.html:398
+msgid "KING STORE"
+msgstr "KING STORE"
+
+#: .\DimosoApp\templates\MyProducts\base.html:398
+msgid "EveryDay"
+msgstr "EveryDay"
+
+#: .\DimosoApp\templates\MyProducts\base.html:398
+msgid "Market"
+msgstr "Market"
+
+#: .\DimosoApp\templates\MyProducts\base.html:424
+msgid "Stock"
+msgstr "Dukani"
+
+#: .\DimosoApp\templates\MyProducts\base.html:432
+msgid "EndingProducts"
+msgstr "Bidhaa Zinazoisha"
+
+#: .\DimosoApp\templates\MyProducts\base.html:464
+msgid "Point Of Sales"
+msgstr "Mauzo na Manunuzi"
+
+#: .\DimosoApp\templates\MyProducts\base.html:469
+#: .\DimosoApp\templates\MyProducts\base.html:508
+#: .\DimosoApp\templates\MyProducts\base.html:541
+msgid "Today"
+msgstr "Leo"
+
+#: .\DimosoApp\templates\MyProducts\base.html:471
+#: .\DimosoApp\templates\MyProducts\base.html:510
+#: .\DimosoApp\templates\MyProducts\base.html:543
+msgid "January"
+msgstr "Mwezi wa Kwanza"
+
+#: .\DimosoApp\templates\MyProducts\base.html:472
+#: .\DimosoApp\templates\MyProducts\base.html:511
+#: .\DimosoApp\templates\MyProducts\base.html:544
+msgid "February"
+msgstr "Mwezi wa Pili"
+
+#: .\DimosoApp\templates\MyProducts\base.html:473
+#: .\DimosoApp\templates\MyProducts\base.html:512
+#: .\DimosoApp\templates\MyProducts\base.html:545
+msgid "March"
+msgstr "Mwezi wa Tatu"
+
+#: .\DimosoApp\templates\MyProducts\base.html:474
+#: .\DimosoApp\templates\MyProducts\base.html:513
+#: .\DimosoApp\templates\MyProducts\base.html:546
+msgid "April"
+msgstr "Mwezi wa Nne"
+
+#: .\DimosoApp\templates\MyProducts\base.html:475
+#: .\DimosoApp\templates\MyProducts\base.html:514
+#: .\DimosoApp\templates\MyProducts\base.html:547
+msgid "May"
+msgstr "Mwezi wa Tano"
+
+#: .\DimosoApp\templates\MyProducts\base.html:476
+#: .\DimosoApp\templates\MyProducts\base.html:515
+#: .\DimosoApp\templates\MyProducts\base.html:548
+msgid "June"
+msgstr "Mwezi wa Sita"
+
+#: .\DimosoApp\templates\MyProducts\base.html:477
+#: .\DimosoApp\templates\MyProducts\base.html:516
+#: .\DimosoApp\templates\MyProducts\base.html:549
+msgid "July"
+msgstr "Mwezi wa Saba"
+
+#: .\DimosoApp\templates\MyProducts\base.html:478
+#: .\DimosoApp\templates\MyProducts\base.html:517
+#: .\DimosoApp\templates\MyProducts\base.html:550
+msgid "August"
+msgstr "Mwezi wa Nane"
+
+#: .\DimosoApp\templates\MyProducts\base.html:479
+#: .\DimosoApp\templates\MyProducts\base.html:518
+#: .\DimosoApp\templates\MyProducts\base.html:551
+msgid "September"
+msgstr "Mwezi wa Tisa"
+
+#: .\DimosoApp\templates\MyProducts\base.html:480
+#: .\DimosoApp\templates\MyProducts\base.html:519
+#: .\DimosoApp\templates\MyProducts\base.html:552
+msgid "October"
+msgstr "Mwezi wa Kumi"
+
+#: .\DimosoApp\templates\MyProducts\base.html:481
+#: .\DimosoApp\templates\MyProducts\base.html:520
+#: .\DimosoApp\templates\MyProducts\base.html:553
+msgid "November"
+msgstr "Mwezi wa Kumi na Moja"
+
+#: .\DimosoApp\templates\MyProducts\base.html:482
+#: .\DimosoApp\templates\MyProducts\base.html:521
+#: .\DimosoApp\templates\MyProducts\base.html:554
+msgid "December"
+msgstr "Mwezi wa Kumi na Mbili"
+
+#: .\DimosoApp\templates\MyProducts\base.html:484
+#: .\DimosoApp\templates\MyProducts\base.html:523
+#: .\DimosoApp\templates\MyProducts\base.html:556
+msgid "All Months"
+msgstr "Miezi Yote"
+
+#: .\DimosoApp\templates\MyProducts\base.html:503
+msgid "Issued Items History"
+msgstr "Bidhaa Zote Zilizouzwa"
+
+#: .\DimosoApp\templates\MyProducts\base.html:607
+msgid "About us"
+msgstr "Kuhusu Sisi"
+
+#: .\DimosoApp\templates\MyProducts\base.html:608
+msgid ""
+"We are team of talented designers && developers making websites with Python "
+"and Php."
+msgstr "Timu yenye Vipaji inayotengeneza Mifumo kwa kutumia Python na Php."
+
+#: .\DimosoApp\templates\MyProducts\base.html:613
+msgid "Follow Dimoso El Junior in social networks"
+msgstr "Mfuate Dimoso El Junior kwenye Mitandao ya Kijamii"
+
+#: .\DimosoApp\templates\MyProducts\base.html:629
+msgid "My Team"
+msgstr "Timu Yangu"
+
+#: .\DimosoApp\templates\MyProducts\base.html:644
+msgid "Copyright 2021 All rights reserved"
+msgstr "Copyright 2021 Haki zote Zimehifadhiwa"
+
+#: .\DimosoApp\templates\MyProducts\base.html:644
+msgid "made by"
+msgstr "Imetengenezwa Na"
+
+#: .\DimosoApp\templates\MyProducts\checkout.html:45
+msgid "Checkout form"
+msgstr "Fomu Ya Malipo"
+
+#: .\DimosoApp\templates\MyProducts\checkout.html:61
+msgid "Street address"
+msgstr "Anuani ya Mtaa"
+
+#: .\DimosoApp\templates\MyProducts\checkout.html:65
+msgid "Apartment address"
+msgstr "Anuani Ya Makazi"
+
+#: .\DimosoApp\templates\MyProducts\checkout.html:70
+msgid "Country"
+msgstr "Nchi"
+
+#: .\DimosoApp\templates\MyProducts\checkout.html:73
+msgid "Please select a valid country"
+msgstr "Tafadhali Chagua Nchi Sahihi"
+
+#: .\DimosoApp\templates\MyProducts\checkout.html:77
+msgid "Zip"
+msgstr "Zipu"
+
+#: .\DimosoApp\templates\MyProducts\checkout.html:80
+msgid "Zip code required."
+msgstr "Zipu Kodi Zinahitajika"
+
+#: .\DimosoApp\templates\MyProducts\checkout.html:105
+msgid "Continue to Payment"
+msgstr "Endelea na Malipo"
+
+#: .\DimosoApp\templates\MyProducts\contact_me.html:45
+msgid "MAKE CONTACT"
+msgstr "FANYA MAWASILIANO"
+
+#: .\DimosoApp\templates\MyProducts\contact_me.html:63
+msgid "Email"
+msgstr "Email"
+
+#: .\DimosoApp\templates\MyProducts\contact_me.html:69
+msgid "Username"
+msgstr "Jina Unalotumia"
+
+#: .\DimosoApp\templates\MyProducts\contact_me.html:75
+msgid "Phone"
+msgstr "Namba ya Simu"
+
+#: .\DimosoApp\templates\MyProducts\contact_me.html:81
+msgid "Place"
+msgstr "Sehemu"
+
+#: .\DimosoApp\templates\MyProducts\contact_me.html:87
+msgid "Message"
+msgstr "Ujumbe"
+
+#: .\DimosoApp\templates\MyProducts\contact_me.html:106
+msgid "Send Email"
+msgstr "Tuma Email"
+
+#: .\DimosoApp\templates\MyProducts\home.html:403
+msgid "Special Products With Offers"
+msgstr "Bidhaa Maalumu Kwa Punguzo"
+
+#: .\DimosoApp\templates\MyProducts\home.html:445
+msgid "All Categories"
+msgstr "Aina Zote"
+
+#: .\DimosoApp\templates\MyProducts\home.html:490
+msgid "ALL PRODUCT CATEGORIES"
+msgstr "AINA ZOTE ZA BIDHAA"
+
+#: .\DimosoApp\templates\MyProducts\home.html:500
+msgid "Enter Product Name"
+msgstr "Ingiza Jina La Bidhaa"
+
+#: .\DimosoApp\templates\MyProducts\home.html:554
+msgid "OUR PRODUCTS"
+msgstr "BIDHAA ZETU"
+
+#: .\DimosoApp\templates\MyProducts\home.html:634
+msgid "There is no any product uploaded!!!!"
+msgstr "Hakuna Bidhaa Yoyote Iliyowekwa"
+
+#: .\DimosoApp\templates\MyProducts\order_summary.html:4
+msgid "Order Summary"
+msgstr "Ufupisho wa Oda"
+
+#: .\DimosoApp\templates\MyProducts\order_summary.html:45
+msgid "Order summary"
+msgstr "Ufupisho wa Oda"
+
+#: .\DimosoApp\templates\MyProducts\order_summary.html:52
+msgid "Item title"
+msgstr "Jina la Bidhaa"
+
+#: .\DimosoApp\templates\MyProducts\order_summary.html:54
+msgid "Price"
+msgstr "Bei"
+
+#: .\DimosoApp\templates\MyProducts\order_summary.html:55
+msgid "Total Item Price"
+msgstr "Bei ya Jumla ya Bidhaa"
+
+#: .\DimosoApp\templates\MyProducts\order_summary.html:56
+msgid "action"
+msgstr "Tendo"
+
+#: .\DimosoApp\templates\MyProducts\order_summary.html:90
+msgid "Remove"
+msgstr "Ondoa"
+
+#: .\DimosoApp\templates\MyProducts\order_summary.html:98
+#: .\DimosoApp\templates\MyProducts\order_summary.html:121
+#: .\DimosoApp\templates\MyProducts\order_summary.html:131
+#: .\DimosoApp\templates\MyProducts\product_details.html:315
+msgid "Continue Shopping"
+msgstr "Endelea Kununua"
+
+#: .\DimosoApp\templates\MyProducts\order_summary.html:106
+msgid "Order total"
+msgstr "Jumla ya Oda"
+
+#: .\DimosoApp\templates\MyProducts\order_summary.html:115
+msgid "Send Email To Me"
+msgstr "Tuma Email Kwangu"
+
+#: .\DimosoApp\templates\MyProducts\order_summary.html:119
+msgid "Prodeed to checkout"
+msgstr "Endelea na Malipo"
+
+#: .\DimosoApp\templates\MyProducts\order_summary.html:130
+msgid "No items in your cart"
+msgstr "Hakuna Bidhaa yoyote kwenye kikapu chako"
+
+#: .\DimosoApp\templates\MyProducts\payment.html:53
+msgid "Complete your order"
+msgstr "Malizia Oda yako"
+
+#: .\DimosoApp\templates\MyProducts\payment.html:61
+msgid "Credit or debit card"
+msgstr "Chagua Kadi"
+
+#: .\DimosoApp\templates\MyProducts\payment.html:66
+msgid "Submit Payment"
+msgstr "Tuma Malipo"
+
+#: .\DimosoApp\templates\MyProducts\product_details.html:15
+msgid "Product Page"
+msgstr "Kurasa ya Bidhaa"
+
+#: .\DimosoApp\templates\MyProducts\product_details.html:304
+msgid "Add Order"
+msgstr "Weka Oda"
+
+#: .\DimosoApp\templates\MyProducts\product_details.html:308
+msgid "Remove Your Order"
+msgstr "Ondoa Oda"
+
+#: .\DimosoApp\templates\MyProducts\product_details.html:313
+msgid "We don't have"
+msgstr "Hatuna"
+
+#: .\DimosoApp\templates\MyProducts\product_details.html:313
+msgid "for now"
+msgstr "Kwa sasa"
+
+#: .\DimosoApp\templates\MyProducts\search_product.html:13
+msgid "Search Product"
+msgstr "Tafuta Bidhaa"
+
+#: .\DimosoApp\templates\MyProducts\search_product.html:256
+msgid "Looking for searched product"
+msgstr "Angalia Bidhaa Uliyotafuta"
+
+#: .\DimosoApp\templates\MyProducts\search_product.html:292
+#: .\DimosoApp\templates\MyProducts\search_product.html:294
+msgid "More Details"
+msgstr "Taarifa Zaidi"
+
+#: .\DimosoApp\templates\MyProducts\search_product.html:300
+msgid "There is no such type of product"
+msgstr "Hakuna aina hiyo ya Bidhaa"
+
+#: .\DimosoApp\templates\MyProducts\snippet.html:5
+msgid "Your cart"
+msgstr "Kikapu chako"
+
+#: .\DimosoApp\templates\MyProducts\snippet.html:37
+msgid "Total (Tsh)"
+msgstr "Jumla (Tsh)"
+
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_1.html:80
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_10.html:80
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_11.html:80
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_12.html:80
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_2.html:80
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_3.html:80
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_4.html:80
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_5.html:80
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_6.html:80
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_7.html:80
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_8.html:80
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_9.html:80
+msgid "POINT OF SALES FOR THE MONTH"
+msgstr "MAUZO NA MANUNUZI KWA MWEZI WA"
+
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_1.html:118
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_10.html:117
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_11.html:118
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_12.html:118
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_2.html:117
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_3.html:118
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_4.html:117
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_5.html:116
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_6.html:116
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_7.html:117
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_8.html:117
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_9.html:118
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_today.html:119
+msgid "Profit of Tsh."
+msgstr "Faida ya Tsh."
+
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_1.html:121
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_10.html:120
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_11.html:121
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_12.html:121
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_2.html:120
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_3.html:121
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_4.html:120
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_5.html:119
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_6.html:119
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_7.html:120
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_8.html:120
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_9.html:121
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_today.html:122
+msgid "Loss of Tsh."
+msgstr "Hasara ya Tsh."
+
+#: .\DimosoApp\templates\POINT_OF_SALES_ALL_MONTHS\point_of_sales_today.html:82
+msgid "POINT OF SALES TODAY"
+msgstr "MAUZO NA MANUNUZI YA LEO"
+
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_1.html:85
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_10.html:85
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_11.html:85
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_12.html:85
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_2.html:85
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_3.html:85
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_4.html:85
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_5.html:85
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_6.html:85
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_7.html:85
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_8.html:85
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_9.html:85
+msgid "LIST OF ALL RECEIVED ITEMS FOR THE MONTH"
+msgstr "ORODHA YA BIDHAA ZOTE ZILIZONUNULIWA KWA MWEZI WA"
+
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_1.html:104
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_10.html:104
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_11.html:104
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_12.html:104
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_2.html:104
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_3.html:104
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_4.html:104
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_5.html:104
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_6.html:104
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_7.html:104
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_8.html:104
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_9.html:104
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_today.html:107
+msgid "Total Purchasing <br> Amount"
+msgstr "Jumla ya pesa ya Manunuzi"
+
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_1.html:105
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_10.html:105
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_11.html:105
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_12.html:105
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_2.html:105
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_3.html:105
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_4.html:105
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_5.html:105
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_6.html:105
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_7.html:105
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_8.html:105
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_9.html:105
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_today.html:108
+msgid "Last Purchasing"
+msgstr "Manunuzi ya Mwisho"
+
+#: .\DimosoApp\templates\RECEIVED_ITEMS_MONTHS\received_items_history_today.html:88
+msgid "LIST OF ALL RECEIVED ITEMS TODAY"
+msgstr "ORODHA YA BIDHAA ZOTE ZILIZONUNULIWA LEO"
+
+#: .\DimosoProject\settings.py:145
+msgid "English"
+msgstr ""
+
+#: .\DimosoProject\settings.py:146
+msgid "Swahili"
+msgstr ""
+
+#: .\DimosoProject\urls.py:26
+msgid "admin/"
+msgstr "admini"
+
+#: .\MyProducts\views.py:65 .\MyProducts\views.py:103
+msgid "hello"
+msgstr "haloo"

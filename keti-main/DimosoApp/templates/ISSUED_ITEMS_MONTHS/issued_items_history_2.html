@@ -1,0 +1,202 @@
+{% extends 'MyProducts/base.html' %}
+{% load static %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}{% translate "Issued Item History" %}{% endblock %}</title>
+       <!--another jquery for autofilll in add dozi.html css--->
+
+    <!---jqeury css link---->
+     <link rel="stylesheet" href="{% static 'DimosoApp/assets/jqueryui/jquery-ui.css' %}">
+    <link rel="stylesheet" href="{% static 'DimosoApp/assets/jqueryui/jquery-ui.structure.min.css' %}">
+    <link rel="stylesheet" href="{% static 'DimosoApp/assets/jqueryui/jquery-ui.structure.css' %}">
+    <link rel="stylesheet" href="{% static 'DimosoApp/assets/jqueryui/jquery-ui.theme.min.css' %}">
+     <link rel="stylesheet" href="{% static 'DimosoApp/assets/jqueryui/jquery-ui.theme.css' %}">
+
+     <link rel="stylesheet" href="{% static 'DimosoApp/assets/myjs.js' %}">
+
+  <style type="text/css">
+       table{
+        background-color: white;
+        border-radius: 15px;
+        
+
+       
+
+      }
+
+      table tbody tr td,
+table thead tr th,
+table thead{
+  border-left: 2px solid black;
+  border-right:2px solid black;
+  border-bottom: 2px solid black;
+  border-top: 2px solid black; 
+  color: black;
+  font-size: 20px;
+}
+.batani{
+        background-color: blue;
+        width: 4cm;
+        color: white;
+        border-radius: 10px;
+        padding: 10px;
+        margin-top: 20px;
+        margin-bottom: 1cm;
+      }
+
+input{
+  
+  padding: 15px;
+  margin: 5px;
+  border-radius: 10px;
+  border: 2px solid blue;
+}
+
+  </style>
+</head>
+<body style="background-color: #128C7E;color: white;font-family: bold;">
+
+
+ {% if messages %}
+    {% for message in messages %}
+     
+
+          <div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <strong>{{message}}</strong>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+    {% endfor %}
+  {% endif %}
+
+<div class="container">
+
+  <div class="row">
+
+    
+<div class="col-md-12">
+<center>
+  <h1 style="color: white;font-family: bold;">{% translate "LIST OF ALL ISSUED ITEMS FOR THE MONTH" %} 2/ {{current_year}}</h1>
+
+  
+
+  
+</center>
+
+{% if queryset %}
+
+<div class="table-responsive text-nowrap">
+  <table class="table">
+  <thead>
+    <tr>
+      <th>{% translate "No" %}</th>
+     
+      <th>{% translate "Item<br> Name" %}</th>
+      <th>{% translate "Issued<br> Quantity" %}</th>
+      <th>{% translate "Total Quantity<br> In Store" %}</th>
+       <th>{% translate "Issued<br> By" %}</th>
+       <th>{% translate "Sales <br> Amount" %}</th>
+        <th>{% translate "Last <br> Sales" %}  </th>
+        
+         <th>{% translate "Last <br> Updated" %}</th>
+
+
+
+       <!---
+        <th>Issued<br>Quantity</th>
+        <th>Issued<br> To</th>
+       
+         <th>Issued<br>By</th>
+         <th>Perform<br>Action</th>--->
+         
+    </tr>
+  </thead>
+
+  <tbody>
+    {% for instance in queryset %}
+    <tr>
+      <td>{{forloop.counter}}</td>
+     
+      <td>{{instance.item_name}}</td>
+      <td>{{instance.issue_quantity}}</td>
+      <td>{{instance.quantity}}</td>
+      <td>{{instance.issue_by}}</td>
+       <td>{{instance.sales_amount}}</td>
+       <td>{{instance.receive_amount}}</td>
+       <td>{{instance.last_updated|date:'d-m-Y H:i' }}</td>
+      <!---
+      <td>{{instance.issue_quantity}}</td>
+      <td>{{instance.issue_by}}</td>
+      <td>{{instance.issue_to}}</td>--->
+
+     
+     
+
+      
+     
+     
+    </tr>
+
+    {% endfor %}
+  </tbody>
+  </table>
+  
+</div>
+
+
+
+  </div><!--mwisho wa column ya width 8--->
+
+
+  </div><!--mwisho wa row --->
+  
+</div>
+<center>
+ <h2>{% translate "Total Sales" %}:  Tsh.{{get_sum.sum}}/=</h2>
+ <h2>{% translate "Minimum Sales" %} :  Tsh.{{get_min.min}}/=</h2>
+ <h2>{% translate "Maximum Sales" %}:  Tsh.{{get_max.max}}/=</h2>
+ <h2>{% translate "Sales Average" %}:  Tsh.{{get_avg.avg}}/=</h2>
+
+</center>
+{% else %}
+<h1>{% translate "There is no Any Item issued from a Stock" %}</h1>
+
+{% endif %}
+
+
+
+
+<br><br>
+<div style="color: black;background-color: white;font-size: 22px;">
+<center>
+ <h2 style="color: black;font-size: 20px;"> {% translate "page" %} {{queryset.number}} {% translate "of" %} {{queryset.paginator.num_pages}}</h2>
+{% if queryset.has_previous %}
+<a href="?page=1" style="font-weight: bold;text-decoration: none;font-size: 20px;">&laquo {% translate "First" %}</a>
+<a href="?page={{queryset.previous_page_number}}"style="font-weight: bold;text-decoration: none;font-size: 20px;">{% translate "Previous" %}</a>
+{% endif %}
+
+
+
+{% if queryset.has_next %}
+<a href="?page={{queryset.next_page_number}}" style="font-weight: bold;text-decoration: none;font-size: 20px;">{% translate "Next" %}</a>
+<a href="?page={{queryset.paginator.num_pages}}" style="font-weight: bold;text-decoration: none;font-size: 20px;">{% translate "Last" %} &raquo</a>
+
+{% endif %}
+
+</center>
+</div>
+
+<!--jquery code for autocomplete javascriptcode---->
+<script src="{% static 'DimosoApp/assets/jqueryui/external/jquery/jquery.js' %}" type="text/javascript"></script>
+<script src="{% static 'DimosoApp/assets/jqueryui/jquery-ui.js' %}" type="text/javascript"></script>
+<script src="{% static 'DimosoApp/assets/jqueryui/jquery-ui.min.js' %}" type="text/javascript"></script>
+
+
+
+
+</body>
+</html>
+{% endblock %}
