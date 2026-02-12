@@ -7,28 +7,41 @@
     <title>Dashboard | Inventory</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  
+    <!-- ================= FONT AWESOME (ONLINE CDN) ================= -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+          integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer" />
 
-
-
-
-
- <!-- Vendor CSS Files ----->
+    <!-- Vendor CSS Files -->
     <link href="{% static 'DimosoApp/assets/css/animate.min.css' %}" rel="stylesheet">
     <link href="{% static 'DimosoApp/assets/css/bootstrap.min.css' %}" rel="stylesheet">
     <link href="{% static 'DimosoApp/assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
-  
-    <link href="{% static 'DimosoApp/assets/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
-  
+
+    <!-- GOOGLE FONT : INTER -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 
+    
 
     <style>
+        /* ===== GLOBAL FONT ===== */
+        *,
+        *::before,
+        *::after{
+          font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont,
+                       'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+                       'Helvetica Neue', Arial, sans-serif;
+        }
+
         body {
             background: linear-gradient(120deg,#e8f5e9,#f9fff9);
         }
 
-        /* HERO SECTION */
+        /* HERO */
         .hero {
             background: linear-gradient(
                 rgba(0, 80, 40, 0.65),
@@ -43,12 +56,6 @@
             box-shadow: 0 15px 40px rgba(0,0,0,.3);
         }
 
-        .hero h1 {
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
-
-        /* MENU CARD */
         .menu-card {
             height: 180px;
             border-radius: 22px;
@@ -59,25 +66,19 @@
             justify-content: center;
             color: #fff;
             text-align: center;
-            border: 2px solid rgba(255,255,255,.3);
             box-shadow: 0 20px 40px rgba(0,0,0,.25);
-            transition: all .4s ease;
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
+            transition: .4s;
         }
 
         .menu-card i {
-            font-size: 45px;
+            font-size: 46px;
             margin-bottom: 15px;
         }
 
-        .menu-card h5 {
-            font-weight: bold;
-            letter-spacing: .5px;
+        .menu-card:hover {
+            transform: translateY(-10px);
         }
 
-        /* CARD GRADIENTS */
         .card-1 { background: linear-gradient(135deg,#1b5e20,#4caf50); }
         .card-2 { background: linear-gradient(135deg,#2e7d32,#66bb6a); }
         .card-3 { background: linear-gradient(135deg,#33691e,#7cb342); }
@@ -85,197 +86,76 @@
         .card-5 { background: linear-gradient(135deg,#2e7d32,#a5d6a7); }
         .card-6 { background: linear-gradient(135deg,#388e3c,#66bb6a); }
 
-        /* HOVER EFFECT */
-        .menu-card::before {
-            content: "";
-            position: absolute;
-            top: -100%;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(255,255,255,.15);
-            transition: .4s;
-        }
-
-        .menu-card:hover::before {
-            top: 0;
-        }
-
-        .menu-card:hover {
-            transform: translateY(-12px) scale(1.03);
-            box-shadow: 0 30px 60px rgba(0,0,0,.4);
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-
-
-
-/*--------------------------------------------------------------
-# Global Footer
---------------------------------------------------------------*/
-.footer {
-  color: var(--default-color);
-  background-color: var(--background-color);
-  font-size: 14px;
-  text-align: center;
-  padding: 30px 0;
-  position: relative;
-}
-
-.footer h3 {
-  font-size: 36px;
-  font-weight: 700;
-  position: relative;
-  padding: 0;
-  margin: 0 0 15px 0;
-}
-
-.footer p {
-  font-size: 15;
-  font-style: italic;
-  padding: 0;
-  margin: 0 0 30px 0;
-}
-
-.footer .social-links {
-  margin: 0 0 30px 0;
-}
-
-.footer .social-links a {
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--accent-color);
-  color: var(--contrast-color);
-  line-height: 1;
-  margin: 0 4px;
-  border-radius: 50%;
-  text-align: center;
-  width: 36px;
-  height: 36px;
-  transition: 0.3s;
-}
-
-.footer .social-links a:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 20%);
-  text-decoration: none;
-}
-
-.footer .copyright {
-  padding-top: 25px;
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-}
-
-.footer .credits {
-  font-size: 13px;
-  padding-top: 5px;
-}
-
-
+        a { text-decoration:none; }
     </style>
 </head>
+
 <body>
 
-<!-- HERO -->
 <div class="hero text-center">
     <h1>WELCOME TO MWASOTE PEMBEJEO ZA KILIMO</h1>
-    <p class="mt-2">Manage stock, sales, purchases and reports easily</p>
+    <p>Manage stock, sales, purchases and reports easily</p>
 </div>
 
-<!-- DASHBOARD MENU -->
 <div class="container my-5">
     <div class="row g-4">
 
         <div class="col-lg-4 col-md-6">
             <a href="{% url 'maduka_yote' %}">
                 <div class="menu-card card-1">
-                    <i class="fa fa-store"></i>
+                    <i class="fa-solid fa-store"></i>
                     <h5>Maduka Yote</h5>
                 </div>
             </a>
         </div>
 
-
-            <div class="col-lg-4 col-md-6">
-             <a href="{% url 'mauzo_maduka' %}">
-            <div class="menu-card card-4">
-                <i class="fa fa-money-bill-wave"></i>
-                <h5>Mauzo</h5>
-            </div></a>
-        </div>
-
-     
-
         <div class="col-lg-4 col-md-6">
-           <a href="{% url 'manunuzi_maduka' %}">
-            <div class="menu-card card-5">
-                <i class="fa fa-cart-shopping"></i>
-                <h5>Manunuzi</h5>
-            </div></a>
-        </div>
-
-
-        <div class="col-lg-4 col-md-6">
-          <a href="{% url 'add_items' %}">
-            <div class="menu-card card-2">
-                <i class="fa fa-box-open"></i>
-                <h5>Add Product</h5>
-            </div></a>
+            <a href="{% url 'mauzo_maduka' %}">
+                <div class="menu-card card-4">
+                    <i class="fa-solid fa-money-bill-wave"></i>
+                    <h5>Mauzo</h5>
+                </div>
+            </a>
         </div>
 
         <div class="col-lg-4 col-md-6">
-           <a href="{% url 'reports_maduka' %}">
-            <div class="menu-card card-3">
-                <i class="fa fa-chart-line"></i>
-                <h5>Reports</h5>
-            </div></a>
+            <a href="{% url 'manunuzi_maduka' %}">
+                <div class="menu-card card-5">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <h5>Manunuzi</h5>
+                </div>
+            </a>
         </div>
 
-    
+        <div class="col-lg-4 col-md-6">
+            <a href="{% url 'add_items' %}">
+                <div class="menu-card card-2">
+                    <i class="fa-solid fa-box-open"></i>
+                    <h5>Add Product</h5>
+                </div>
+            </a>
+        </div>
 
         <div class="col-lg-4 col-md-6">
-           <a href="{% url 'users_list' %}">
-            <div class="menu-card card-6">
-                <i class="fa fa-cash-register"></i>
-                <h5>Users</h5>
-            </div></a>
+            <a href="{% url 'reports_maduka' %}">
+                <div class="menu-card card-3">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <h5>Reports</h5>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+            <a href="{% url 'users_list' %}">
+                <div class="menu-card card-6">
+                    <i class="fa-solid fa-cash-register"></i>
+                    <h5>Users</h5>
+                </div>
+            </a>
         </div>
 
     </div>
 </div>
-
-
-
-
-  <footer id="footer" class="footer dark-background">
-    <div class="container">
-      <h3 class="sitename">Mwasote Store</h3>
-      <p>Mwasote Pembejeo Za Kilimo is a modern inventory management system designed to efficiently manage agricultural input stocks. It enables real-time tracking of products, stores, sales, and purchases. The system helps improve operational efficiency and reduce stock losses</p>
-      <div class="social-links d-flex justify-content-center">
-        <a href=""><i class="bi bi-twitter-x"></i></a>
-        <a href=""><i class="bi bi-facebook"></i></a>
-        <a href=""><i class="bi bi-instagram"></i></a>
-        <a href=""><i class="bi bi-skype"></i></a>
-        <a href=""><i class="bi bi-linkedin"></i></a>
-      </div>
-      <div class="container">
-        <div class="copyright">
-          <span>Copyright</span> <strong class="px-1 sitename">Mwasote Pembejeo Za Kilimo</strong> <span>All Rights Reserved</span>
-        </div>
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you've purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-          Designed by <a href="#">Our developers</a> 
-        </div>
-      </div>
-    </div>
-  </footer>
 
 </body>
 </html>

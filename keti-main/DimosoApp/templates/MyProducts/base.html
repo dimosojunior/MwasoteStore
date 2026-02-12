@@ -3,26 +3,22 @@
 {% load i18n %}
 {% load Myproducts %}
 
-<!-- MWASOTE -->
-
 <!DOCTYPE html>
 <html lang="{{ LANGUAGE_CODE }}">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>{% translate "Stock Management System" %}</title>
-    <!-- base:css -->
-    <link rel="stylesheet" href="{% static 'admini/vendors/mdi/css/materialdesignicons.min.css' %}">
-    <link rel="stylesheet" href="{% static 'admini/vendors/base/vendor.bundle.base.css' %}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% translate "Stock Management System" %}</title>
 
-    <!-- endinject -->
-    <!-- plugin css for this page -->
-    <!-- End plugin css for this page -->
-    <!-- inject:css -->
-    <link rel="stylesheet" href="{% static 'admini/css/style.css' %}">
-    <!-- endinject -->
-    <link rel="shortcut icon" href="{% static 'admini/images/44.jpg' %}" />
+  <!-- CSS ZAKO ZOTE -->
+  <link rel="stylesheet" href="{% static 'admini/vendors/mdi/css/materialdesignicons.min.css' %}">
+  <link rel="stylesheet" href="{% static 'admini/vendors/base/vendor.bundle.base.css' %}">
+  <link rel="stylesheet" href="{% static 'admini/css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'DimosoApp/assets/css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'DimosoApp/assets/vendor/bootstrap-icons/bootstrap-icons.css' %}">
+  <link rel="shortcut icon" href="{% static 'admini/images/44.jpg' %}">
+
+
 
 
             <!-- Font Awesome Icons -->
@@ -53,13 +49,151 @@
     <link href="{% static 'DimosoApp/assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
   
     <link href="{% static 'DimosoApp/assets/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
-    
-   <style type="text/css">
- 
 
-.text-center{
-  font-size: 15px;
+ 
+      <!-- GOOGLE FONT : INTER (PROFESSIONAL SYSTEM FONT) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+
+
+    <style>
+
+      /* ===== GLOBAL FONT FOR ENTIRE SYSTEM ===== */
+*,
+*::before,
+*::after{
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 
+               'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 
+               'Helvetica Neue', Arial, sans-serif;
 }
+
+
+
+
+
+
+
+    /* ================= HEADER ================= */
+    .mwasote-header{
+      background:linear-gradient(135deg,#0f5132,#128C7E);
+      position:fixed;
+      top:0;
+      left:0;
+      width:100%;
+      z-index:9999;
+      box-shadow:0 6px 25px rgba(0,0,0,.35);
+    }
+
+    body{ padding-top:50px; }
+
+    .header-container{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:14px 20px;
+    }
+
+    .mwasote-brand{
+      font-size:22px;
+      font-weight:800;
+      color:#fff;
+      text-decoration:none;
+    }
+
+    .nav-desktop{
+      display:flex;
+      align-items:center;
+      gap:20px;
+    }
+
+    .nav-link-custom{
+      color:#fff;
+      font-weight:600;
+      cursor:pointer;
+      text-decoration:none;
+    }
+
+    .nav-link-custom:hover{
+      /*text-decoration:underline;*/
+      text-decoration: none;
+      color: red;
+    }
+
+    /* ===== DROPDOWN ===== */
+    .dropdown{
+      position:relative;
+    }
+
+    .dropdown-menu-custom{
+      display:none;
+      position:absolute;
+      right:0;
+      top:120%;
+      background:#fff;
+      border-radius:8px;
+      min-width:200px;
+      box-shadow:0 10px 30px rgba(0,0,0,.3);
+      overflow:hidden;
+    }
+
+    .dropdown-menu-custom button,
+    .dropdown-menu-custom a{
+      width:100%;
+      border:none;
+      background:none;
+      padding:10px 15px;
+      text-align:left;
+      cursor:pointer;
+      text-decoration:none;
+      color:#000;
+    }
+
+    .dropdown-menu-custom button:hover,
+    .dropdown-menu-custom a:hover{
+      background:green;
+      text-decoration: none;
+      color: white;
+    }
+
+    /* ===== MOBILE ===== */
+    .menu-toggle{
+      display:none;
+      font-size:24px;
+      color:#fff;
+      cursor:pointer;
+    }
+
+    .mobile-menu{
+      display:none;
+      background:#0f5132;
+    }
+
+    .mobile-menu a{
+      display:block;
+      padding:12px 20px;
+      color:#fff;
+      text-decoration:none;
+      border-top:1px solid rgba(255,255,255,.2);
+    }
+
+    .mobile-submenu{
+      display:none;
+      background:#128C7E;
+    }
+
+    @media(max-width:768px){
+      .nav-desktop{ display:none; }
+      .menu-toggle{ display:block; }
+    }
+
+
+
+
+
+
+
 
 
 
@@ -129,184 +263,76 @@
 
 
 
-   /* ===== NEW PROFESSIONAL HEADER ===== */
-      .mwasote-header{
-        background:linear-gradient(135deg,#0f5132,#128C7E);
-        position:fixed;
-        top:0;
-        width:100%;
-        z-index:1050;
-        box-shadow:0 6px 25px rgba(0,0,0,.35);
-      }
-
-      body{
-        padding-top:00px;
-      }
-
-      .mwasote-brand{
-        font-size:22px;
-        font-weight:800;
-        color:#fff;
-        text-decoration:none;
-      }
-
-      .mwasote-brand span{
-        color:#c8e6c9;
-      }
-
-      .nav-link-custom{
-        color:#e8f5e9 !important;
-        font-weight:600;
-        margin:0 6px;
-      }
-
-      .nav-link-custom:hover{
-        color:#fff !important;
-      }
-
-      .welcome-user{
-        background:rgba(255,255,255,.15);
-        padding:6px 14px;
-        border-radius:20px;
-        color:#fff;
-        font-size:14px;
-      }
-
-      @media(max-width:768px){
-        .welcome-user{
-          display:none;
-        }
-      }
 
 
-   </style>
+  </style>
+</head>
 
-  </head>
-  <body >
-    
-    <div class="container-fluid" >
+<body>
 
+<!-- ================= HEADER ================= -->
+<nav class="mwasote-header">
+  <div class="header-container">
 
-<!-- =================== NEW HEADER =================== -->
-<nav class="navbar navbar-expand-lg mwasote-header">
-  <div class="container-fluid">
+    <!-- LOGO -->
+    <a class="mwasote-brand">MWASOTE 🌱</a>
 
-    <a class="mwasote-brand" href="#">
-      MWASOTE <span>PEMBEJEO ZA KILIMO</span>
-    </a>
+    <!-- DESKTOP MENU -->
+    <div class="nav-desktop">
+      {% if user.is_superuser %}
+        <a href="/admin" class="nav-link-custom">Admin</a>
+      {% endif %}
 
-    <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#mwasoteNavbar">
-      <i class="mdi mdi-menu"></i>
-    </button>
+      <a href="{% url 'options' %}" class="nav-link-custom">Home</a>
 
-    <div class="collapse navbar-collapse justify-content-end" id="mwasoteNavbar">
-      <ul class="navbar-nav align-items-center">
+      <div class="dropdown">
+        <span class="nav-link-custom" onclick="toggleDesktopMore()">More ▾</span>
 
-        {% if user.is_superuser %}
-        <li class="nav-item">
-          <a href="/admin" target="_blank" class="nav-link nav-link-custom">
-            <i class="mdi mdi-shield-account"></i> Admin
-          </a>
-        </li>
-        {% endif %}
+        <div class="dropdown-menu-custom" id="desktopMore">
+          <form action="{% url 'set_language' %}" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="language" value="sw">
+            <button>🇹🇿 Kiswahili</button>
+          </form>
+          <form action="{% url 'set_language' %}" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="language" value="en">
+            <button>🇬🇧 English</button>
+          </form>
+          <a href="{% url 'user_logout' %}" style="color:red;">🚪 Logout</a>
+        </div>
+      </div>
+    </div>
 
-        {% if user.is_authenticated %}
-        <li class="nav-item">
-          <a href="{% url 'options' %}" class="nav-link nav-link-custom">
-            <i class="mdi mdi-home"></i> Home
-          </a>
-        </li>
-        {% endif %}
+    <!-- MOBILE TOGGLE -->
+    <div class="menu-toggle" onclick="toggleMobileMenu()">☰</div>
+  </div>
 
-        <!-- MORE DROPDOWN -->
-        <li class="nav-item dropdown">
-          <button class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown">
-            <i class="mdi mdi-dots-horizontal"></i> More
-          </button>
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    {% if user.is_superuser %}
+      <a href="/admin">Admin</a>
+    {% endif %}
+    <a href="{% url 'options' %}">Home</a>
+    <a href="#" onclick="toggleMobileMore()">More ▾</a>
 
-          <ul class="dropdown-menu dropdown-menu-end shadow">
-
-            <li class="dropdown-header text-muted">
-              {% trans "Change Language" %}
-            </li>
-
-            <li>
-              <form action="{% url 'set_language' %}" method="post">
-                {% csrf_token %}
-                <input type="hidden" name="language" value="sw">
-                <button class="dropdown-item">🇹🇿 Kiswahili</button>
-              </form>
-            </li>
-
-            <li>
-              <form action="{% url 'set_language' %}" method="post">
-                {% csrf_token %}
-                <input type="hidden" name="language" value="en">
-                <button class="dropdown-item">🇬🇧 English</button>
-              </form>
-            </li>
-
-            <li><hr class="dropdown-divider"></li>
-
-            {% if user.is_authenticated %}
-            <li>
-              <a href="{% url 'user_logout' %}" class="dropdown-item text-danger">
-                <i class="mdi mdi-logout"></i> Logout
-              </a>
-            </li>
-            {% else %}
-            <li>
-              <a href="{% url 'user_login' %}" class="dropdown-item">
-                <i class="mdi mdi-login"></i> Login
-              </a>
-            </li>
-            <li>
-              <a href="{% url 'registration' %}" class="dropdown-item">
-                <i class="mdi mdi-account-plus"></i> Register
-              </a>
-            </li>
-            {% endif %}
-          </ul>
-        </li>
-
-        {% if user.is_authenticated %}
-        <li class="nav-item ms-2">
-          <span class="welcome-user">
-            <i class="mdi mdi-account"></i> {{ user.username }}
-          </span>
-        </li>
-        {% endif %}
-
-      </ul>
+    <div class="mobile-submenu" id="mobileMore">
+      <form action="{% url 'set_language' %}" method="post">
+        {% csrf_token %}
+        <input type="hidden" name="language" value="sw">
+        <button style="width:100%;padding:10px;">🇹🇿 Kiswahili</button>
+      </form>
+      <form action="{% url 'set_language' %}" method="post">
+        {% csrf_token %}
+        <input type="hidden" name="language" value="en">
+        <button style="width:100%;padding:10px;">🇬🇧 English</button>
+      </form>
+      <a href="{% url 'user_logout' %}">🚪 Logout</a>
     </div>
   </div>
 </nav>
-<!-- =================== END HEADER =================== -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{% block content %}
-
-
-
-
-
-{% endblock %}
-
+{% block content %}{% endblock %}
 
 
 
@@ -388,9 +414,30 @@
 
     <!-- Vendor JS Files -->
   <script src="{% static 'DimosoApp/assets/js/bootstrap.bundle.min.js' %}"></script>
- 
 
+<script>
+  function toggleDesktopMore(){
+    const m = document.getElementById("desktopMore");
+    m.style.display = m.style.display === "block" ? "none" : "block";
+  }
 
-    <!-- End custom js for this page-->
-  </body>
+  function toggleMobileMenu(){
+    const m = document.getElementById("mobileMenu");
+    m.style.display = m.style.display === "block" ? "none" : "block";
+  }
+
+  function toggleMobileMore(){
+    const m = document.getElementById("mobileMore");
+    m.style.display = m.style.display === "block" ? "none" : "block";
+  }
+
+  document.addEventListener("click", function(e){
+    const d = document.getElementById("desktopMore");
+    if(d && !e.target.closest('.dropdown')){
+      d.style.display = "none";
+    }
+  });
+</script>
+
+</body>
 </html>
